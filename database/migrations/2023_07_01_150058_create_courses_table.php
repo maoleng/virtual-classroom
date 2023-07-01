@@ -22,6 +22,7 @@ return new class extends Migration
             $table->double('price');
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->boolean('is_verify')->default(false);
             $table->dateTime('created_at');
         });
     }

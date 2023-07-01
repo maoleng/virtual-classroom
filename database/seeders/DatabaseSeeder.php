@@ -101,6 +101,7 @@ class DatabaseSeeder extends Seeder
                 'duration' => random_int(15, 25).' hours',
                 'price' => random_int(100, 500) * 1000,
                 'user_id' => $this->faker->randomElement($user_ids),
+                'is_verify' => true,
                 'created_at' => $this->faker->dateTimeBetween('-2 years'),
             ];
         }
