@@ -27,7 +27,6 @@ abstract class BaseRequest extends FormRequest
     {
         return [
             'required' => 'You do not fill :attribute',
-            'email' => ':attribute is invalid',
             'unique' => ':attribute is already exists',
             'exists' => ':attribute is not exists',
         ];
