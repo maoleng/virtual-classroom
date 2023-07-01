@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('name');
             $table->string('avatar');
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->integer('role');
             $table->text('token');
             $table->dateTime('created_at');

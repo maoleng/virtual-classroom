@@ -6,7 +6,7 @@ class Question extends Base
 {
 
     protected $fillable = [
-        'content', 'answer', 'lecture_id', 'user_id', 'created_at',
+        'content', 'text_answer', 'audio_answer', 'video_answer', 'lecture_id', 'user_id', 'created_at',
     ];
 
 

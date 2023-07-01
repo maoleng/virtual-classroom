@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('content');
-            $table->text('answer')->nullable();
+            $table->text('text_answer')->nullable();
+            $table->string('audio_answer')->nullable();
+            $table->string('video_answer')->nullable();
             $table->uuid('lecture_id');
             $table->foreign('lecture_id')->references('id')->on('lectures');
             $table->uuid('user_id');

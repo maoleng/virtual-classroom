@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('thumbnail');
             $table->text('description');
             $table->string('preview_video');
-            $table->double('duration');
+            $table->string('duration');
             $table->double('price');
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');

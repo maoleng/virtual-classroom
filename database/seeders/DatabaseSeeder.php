@@ -3,20 +3,122 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Enums\UserRole;
+use App\Models\Course;
+use App\Models\Lecture;
+use App\Models\Question;
+use App\Models\User;
+use Faker\Factory as Faker;
+use Faker\Generator;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
+
+    private Generator $faker;
+
+    public function __construct()
+    {
+        $this->faker = Faker::create('vi_VN');
+    }
+
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->createUsers(20);
+        $this->createCourses(50);
+        $this->createLectures();
     }
+
+    public function createQuestions()
+    {
+        $user_ids = User::query()->where('role', UserRole::STUDENT)->get()->pluck('id')->toArray();
+        $lecture_ids = Lecture::query()->get()->pluck('id')->toArray();
+
+        $questions = [];
+        foreach ($lecture_ids as $lecture_id) {
+            foreach ($user_ids as $user_id) {
+                $times = $this->faker->randomElement([0, 0, 0, 1, 1, 2, 3]);
+                for ($i = 0; $i <= $times; $i++) {
+                    $questions[] = [
+                        'id' => Str::uuid(),
+                        'content' => $this->faker->sentence(10),
+                        'text_answer' => 'Xin chào thế giới',
+                        'audio_answer' => 'https://chunk.lab.zalo.ai/0a3560510333ea6db322/0a3560510333ea6db322',
+                        'video_answer' => 'https://cdn.discordapp.com/attachments/1005135147613573190/1124554958541422622/mew.mp4',
+                        'lecture_id' => $lecture_id,
+                        'user_id' => $user_id,
+                        'created_at' => now(),
+                    ];
+                }
+            }
+        }
+
+        Question::query()->insert($questions);
+    }
+
+    private function createUsers($count): void
+    {
+        $users = [];
+        for ($i = 3; $i <= $count; $i++) {
+            $email = $this->faker->name();
+            $users[] = [
+                'id' => Str::uuid(),
+                'name' => $email,
+                'email' => $this->faker->email,
+                'avatar' => 'https://i.pinimg.com/736x/b7/03/e8/b703e86875fc4642fb4a40a30df868a4.jpg',
+                'role' => random_int(1, 2),
+                'token' => $email,
+                'created_at' => $this->faker->dateTimeBetween('-2 years', '-1 year'),
+            ];
+        }
+        User::query()->insert($users);
+    }
+
+    private function createCourses($count): void
+    {
+        $user_ids = User::query()->where('role', UserRole::TEACHER)->get()->pluck('id')->toArray();
+        $courses = [];
+        for ($i = 3; $i <= $count; $i++) {
+            $name = $this->faker->title();
+            $courses[] = [
+                'id' => Str::uuid(),
+                'name' => $name,
+                'slug' => Str::slug($name),
+                'thumbnail' => $this->faker->imageUrl,
+                'description' => $this->faker->text,
+                'preview_video' => 'https://www.youtube.com/watch?v=3kVuXXAghyg',
+                'duration' => random_int(15, 25).' hours',
+                'price' => random_int(100, 500) * 1000,
+                'user_id' => $this->faker->randomElement($user_ids),
+                'created_at' => $this->faker->dateTimeBetween('-2 years'),
+            ];
+        }
+        Course::query()->insert($courses);
+    }
+
+
+    private function createLectures(): void
+    {
+        $course_ids = Course::query()->get()->pluck('id')->toArray();
+        $lectures = [];
+        foreach ($course_ids as $course_id) {
+            $count_lectures = random_int(5, 12);
+            for ($i = 1; $i <= $count_lectures; $i++) {
+                $lectures[] = [
+                    'id' => Str::uuid(),
+                    'name' => $this->faker->title(),
+                    'document' => $this->faker->randomHtml(6),
+                    'video' => 'https://www.youtube.com/watch?v=ji8cjaFUIU0',
+                    'order' => $i,
+                    'course_id' => $course_id,
+                    'created_at' => $this->faker->dateTimeBetween('-2 years'),
+                ];
+            }
+        }
+
+        Lecture::query()->insert($lectures);
+    }
+
+
 }
