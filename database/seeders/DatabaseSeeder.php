@@ -61,17 +61,27 @@ class DatabaseSeeder extends Seeder
     {
         $users = [];
         for ($i = 3; $i <= $count; $i++) {
-            $email = $this->faker->name();
+            $email = $this->faker->email;
             $users[] = [
                 'id' => Str::uuid(),
-                'name' => $email,
-                'email' => $this->faker->email,
+                'name' => $this->faker->name(),
+                'email' => $email,
+                'password' => '1234',
                 'avatar' => 'https://i.pinimg.com/736x/b7/03/e8/b703e86875fc4642fb4a40a30df868a4.jpg',
                 'role' => random_int(1, 2),
                 'token' => $email,
                 'created_at' => $this->faker->dateTimeBetween('-2 years', '-1 year'),
             ];
         }
+        User::query()->create([
+            'name' => 'Admin',
+            'email' => 'admin',
+            'password' => '1234',
+            'avatar' => 'https://media.istockphoto.com/id/160231072/photo/gold-crown.jpg?s=612x612&w=0&k=20&c=zHY9w7ujhZCg-uKTHEeLyFc6SZVXaolE9YCRY58FbTA=',
+            'role' => UserRole::ADMIN,
+            'token' => 'admin',
+            'created_at' => now(),
+        ]);
         User::query()->insert($users);
     }
 

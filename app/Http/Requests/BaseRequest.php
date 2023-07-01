@@ -26,20 +26,18 @@ abstract class BaseRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'required' => 'Bạn chưa điền :attribute',
-            'email' => ':attribute chưa đúng định dạng',
-            'same' => ':attribute không khớp',
-            'unique' => 'Đã có người chọn :attribute này',
-            'exists' => ':attribute không tồn tại',
+            'required' => 'You do not fill :attribute',
+            'email' => ':attribute is invalid',
+            'unique' => ':attribute is already exists',
+            'exists' => ':attribute is not exists',
         ];
     }
 
     public function attributes(): array
     {
         return [
-            'email' => 'Địa chỉ email',
-            'password' => 'Mật khẩu',
-            'retype_password' => 'Mật khẩu nhập lại',
+            'email' => 'Email address',
+            'password' => 'Password',
         ];
     }
 
