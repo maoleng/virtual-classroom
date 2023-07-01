@@ -80,7 +80,7 @@ class DatabaseSeeder extends Seeder
         $user_ids = User::query()->where('role', UserRole::TEACHER)->get()->pluck('id')->toArray();
         $courses = [];
         for ($i = 3; $i <= $count; $i++) {
-            $name = $this->faker->title();
+            $name = $this->faker->sentence(8);
             $courses[] = [
                 'id' => Str::uuid(),
                 'name' => $name,
@@ -107,7 +107,7 @@ class DatabaseSeeder extends Seeder
             for ($i = 1; $i <= $count_lectures; $i++) {
                 $lectures[] = [
                     'id' => Str::uuid(),
-                    'name' => $this->faker->title(),
+                    'name' => $this->faker->sentence(15),
                     'document' => $this->faker->randomHtml(6),
                     'video' => 'https://www.youtube.com/watch?v=ji8cjaFUIU0',
                     'order' => $i,

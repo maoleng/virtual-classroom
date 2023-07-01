@@ -1,12 +1,9 @@
 <?php
 
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'user'], static function () {
-    Route::get('/', [UserController::class, 'index']);
-    Route::get('/{id}', [UserController::class, 'show']);
-    Route::post('/', [UserController::class, 'store']);
-    Route::put('/{id}', [UserController::class, 'update']);
-    Route::delete('/{id}', [UserController::class, 'destroy']);
+Route::group(['prefix' => 'course'], static function () {
+    Route::get('/', [CourseController::class, 'index']);
+    Route::get('/{id}', [CourseController::class, 'show']);
 });
