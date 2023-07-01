@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\User;
+namespace App\Http\Requests\Course;
 
 use App\Http\Requests\BaseRequest;
 
@@ -9,6 +9,28 @@ class UpdateRequest extends BaseRequest
 
     public function rules(): array
     {
-        return [];
+        return [
+            'name' => [
+                'nullable',
+            ],
+            'slug' => [
+                'nullable',
+            ],
+            'thumbnail' => [
+                'nullable',
+            ],
+            'description' => [
+                'nullable',
+            ],
+            'preview_video' => [
+                'nullable',
+            ],
+            'duration' => [
+                'nullable',
+            ],
+            'price' => [
+                'nullable',
+            ],
+        ];
     }
 }

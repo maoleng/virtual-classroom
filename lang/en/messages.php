@@ -13,4 +13,5 @@ return [
     'you_are_not_teacher' => 'You are not a teacher',
     'you_are_not_student' => 'You are not a student',
     'register_successfully' => 'Register successfully',
+    'not_your_course' => 'This is not your course',
 ];
