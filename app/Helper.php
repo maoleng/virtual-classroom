@@ -71,3 +71,11 @@ if (! function_exists('authedIsStudent')) {
         return c('authed')->role === UserRole::STUDENT;
     }
 }
+
+if (! function_exists('prettyPrice')) {
+    function prettyPrice($price): string
+    {
+        return number_format($price).' VND';
+    }
+}
+
