@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CourseController;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CourseController;
 use App\Http\Middleware\ApiAuthenticate;
 use App\Http\Middleware\TeacherRole;
 use Illuminate\Support\Facades\Route;

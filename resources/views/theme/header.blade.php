@@ -20,7 +20,7 @@
                             </li>
 
                             <li class="with-megamenu has-menu-child-item position-static">
-                                <a href="{{ route('course') }}">Courses <i class="feather-chevron-down"></i></a>
+                                <a href="{{ route('course.index') }}">Courses <i class="feather-chevron-down"></i></a>
                                 <div class="rbt-megamenu menu-skin-dark">
                                     <div class="wrapper">
                                         <div class="row row--15 home-plesentation-wrapper single-dropdown-menu-presentation">

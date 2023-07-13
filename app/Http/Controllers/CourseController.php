@@ -2,27 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Api\ApiController;
 use App\Http\Requests\Course\StoreRequest;
 use App\Http\Requests\Course\UpdateRequest;
+use App\Models\Course;
 use App\Services\CourseService;
 
-class CourseController extends ApiController
+class CourseController extends Controller
 {
 
-    public function getService()
+    public function index()
     {
-        return c(CourseService::class);
-    }
+        $courses = Course::query()->withCount('lectures')->with('user')->paginate(6);
 
-    public function getStoreRequest()
-    {
-        return c(StoreRequest::class);
+        return view('course.index', [
+            'courses' => $courses,
+        ]);
     }
-
-    public function getUpdateRequest()
-    {
-        return c(UpdateRequest::class);
-    }
-
 
 }

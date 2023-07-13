@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Requests\BaseRequest;
 use App\Models\Base as BaseModel;
 use App\Services\ApiService;
 use Illuminate\Http\Request;
-use App\Http\Requests\BaseRequest;
 
 
 abstract class ApiController extends BaseController

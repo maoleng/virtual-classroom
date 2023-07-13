@@ -16,11 +16,7 @@ class SiteController extends Controller
 
     public function course(): View
     {
-        $courses = Course::query()->withCount('lectures')->with('user')->paginate(6);
 
-        return view('course.index', [
-            'courses' => $courses,
-        ]);
     }
 
 }
