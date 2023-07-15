@@ -12,7 +12,7 @@ class CourseService extends ApiService
     protected function getOrderbyableFields(): array
     {
         return [
-
+            'name', 'duration', 'price', 'rating', 'created_at',
         ];
     }
 
@@ -41,17 +41,18 @@ class CourseService extends ApiService
     {
         return [
             'name', 'slug', 'thumbnail', 'description', 'preview_video', 'duration', 'price', 'user_id', 'is_verify',
-            'created_at',
+            'rating', 'created_at',
         ];
     }
 
-    protected function boot()
+    protected function boot(): void
     {
         parent::boot();
 
         $this->on('creating', function ($model) {
             $model->user_id = c('authed')->id;
             $model->created_at = now();
+            $model->rating = (float) (random_int(3, 4).'.'.random_int(1, 9));
         });
 
         $this->on('updating', function ($model) {

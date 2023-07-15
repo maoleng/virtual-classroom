@@ -23,6 +23,7 @@ return new class extends Migration
             $table->uuid('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->boolean('is_verify')->default(false);
+            $table->float('rating');
             $table->dateTime('created_at');
         });
     }

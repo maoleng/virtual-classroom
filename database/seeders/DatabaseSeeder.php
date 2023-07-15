@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
                 'id' => Str::uuid(),
                 'name' => $this->faker->name(),
                 'email' => $email,
-                'password' => '1234',
+                'password' => '$2y$10$y05/OqLoH0/1uQdbL2FhmeQHZXVDbbw/k45w0O49JhN69emKYuBTO',
                 'avatar' => 'https://i.pinimg.com/736x/b7/03/e8/b703e86875fc4642fb4a40a30df868a4.jpg',
                 'role' => random_int(1, 2),
                 'token' => $email,
@@ -80,6 +80,24 @@ class DatabaseSeeder extends Seeder
             'avatar' => 'https://media.istockphoto.com/id/160231072/photo/gold-crown.jpg?s=612x612&w=0&k=20&c=zHY9w7ujhZCg-uKTHEeLyFc6SZVXaolE9YCRY58FbTA=',
             'role' => UserRole::ADMIN,
             'token' => 'admin',
+            'created_at' => now(),
+        ]);
+        User::query()->create([
+            'name' => 'Teacher',
+            'email' => 'teacher',
+            'password' => '1234',
+            'avatar' => 'https://media.istockphoto.com/id/160231072/photo/gold-crown.jpg?s=612x612&w=0&k=20&c=zHY9w7ujhZCg-uKTHEeLyFc6SZVXaolE9YCRY58FbTA=',
+            'role' => UserRole::TEACHER,
+            'token' => 'teacher',
+            'created_at' => now(),
+        ]);
+        User::query()->create([
+            'name' => 'Student',
+            'email' => 'student',
+            'password' => '1234',
+            'avatar' => 'https://media.istockphoto.com/id/160231072/photo/gold-crown.jpg?s=612x612&w=0&k=20&c=zHY9w7ujhZCg-uKTHEeLyFc6SZVXaolE9YCRY58FbTA=',
+            'role' => UserRole::STUDENT,
+            'token' => 'student',
             'created_at' => now(),
         ]);
         User::query()->insert($users);
@@ -102,6 +120,7 @@ class DatabaseSeeder extends Seeder
                 'price' => random_int(100, 500) * 1000,
                 'user_id' => $this->faker->randomElement($user_ids),
                 'is_verify' => true,
+                'rating' => (float) (random_int(3, 4).'.'.random_int(1, 9)),
                 'created_at' => $this->faker->dateTimeBetween('-2 years'),
             ];
         }
