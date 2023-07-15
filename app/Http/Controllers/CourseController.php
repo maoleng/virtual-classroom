@@ -2,21 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Api\ApiController;
-use App\Http\Requests\Course\StoreRequest;
-use App\Http\Requests\Course\UpdateRequest;
-use App\Models\Course;
-use App\Services\CourseService;
+use Illuminate\Contracts\View\View;
 
 class CourseController extends Controller
 {
 
-    public function index()
+    public function index(): View
     {
-        $courses = Course::query()->withCount('lectures')->with('user')->paginate(6);
+        $courses = services()->courseService()->withCount('lectures')->with('user')->paginate(6);
 
         return view('course.index', [
             'courses' => $courses,
+        ]);
+    }
+
+    public function show($slug)
+    {
+        $course = services()->courseService()->where('slug', $slug)->with(['user', 'lectures', 'users'])->firstOrFail();
+
+        return view('course.show', [
+            'course' => $course,
         ]);
     }
 

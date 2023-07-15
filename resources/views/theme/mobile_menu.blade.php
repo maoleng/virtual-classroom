@@ -4,7 +4,7 @@
             <div class="content">
                 <div class="logo">
                     <a href="/">
-                        <img src="assets/images/logo/logo.png" alt="Education Logo Images">
+                        <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Education Logo Images">
                     </a>
                 </div>
                 <div class="rbt-btn-close">

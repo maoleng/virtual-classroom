@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
                 'thumbnail' => $this->faker->imageUrl,
                 'title' => $this->faker->sentence(12),
                 'description' => $this->faker->sentence(300),
-                'preview_video' => 'https://www.youtube.com/watch?v=3kVuXXAghyg',
+                'preview_video' => '3kVuXXAghyg',
                 'duration' => random_int(15, 25).' hours',
                 'price' => random_int(100, 500) * 1000,
                 'user_id' => $this->faker->randomElement($user_ids),
@@ -138,11 +138,11 @@ class DatabaseSeeder extends Seeder
             for ($i = 1; $i <= $count_lectures; $i++) {
                 $lectures[] = [
                     'id' => Str::uuid(),
-                    'name' => $this->faker->sentence(15),
+                    'name' => $this->faker->sentence(random_int(6, 8)),
                     'document' => $this->faker->randomHtml(6),
-                    'video' => 'https://www.youtube.com/watch?v=ji8cjaFUIU0',
+                    'video' => 'ji8cjaFUIU0',
                     'order' => $i,
-                    'study_minutes' => $i,
+                    'study_minutes' => random_int(20, 90),
                     'course_id' => $course_id,
                     'created_at' => $this->faker->dateTimeBetween('-2 years'),
                 ];
