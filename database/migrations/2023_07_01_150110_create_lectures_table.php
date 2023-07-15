@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('document');
             $table->string('video');
             $table->integer('order');
+            $table->integer('study_minutes');
             $table->uuid('course_id');
             $table->foreign('course_id')->references('id')->on('courses');
             $table->dateTime('created_at');

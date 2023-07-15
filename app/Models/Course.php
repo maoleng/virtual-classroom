@@ -10,7 +10,7 @@ class Course extends Base
 {
 
     protected $fillable = [
-        'name', 'slug', 'thumbnail', 'description', 'preview_video', 'duration', 'price', 'user_id', 'is_verify',
+        'name', 'slug', 'thumbnail', 'title', 'description', 'preview_video', 'duration', 'price', 'user_id', 'is_verify',
         'rating', 'created_at',
     ];
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('thumbnail');
+            $table->string('title');
             $table->text('description');
             $table->string('preview_video');
             $table->string('duration');

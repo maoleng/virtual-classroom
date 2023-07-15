@@ -19,6 +19,9 @@ class UpdateRequest extends BaseRequest
             'thumbnail' => [
                 'nullable',
             ],
+            'title' => [
+                'nullable',
+            ],
             'description' => [
                 'nullable',
             ],

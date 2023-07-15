@@ -19,6 +19,9 @@ class StoreRequest extends BaseRequest
             'thumbnail' => [
                 'required',
             ],
+            'title' => [
+                'required',
+            ],
             'description' => [
                 'required',
             ],
