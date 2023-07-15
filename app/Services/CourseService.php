@@ -3,8 +3,6 @@
 namespace App\Services;
 
 use App\Models\Course;
-use http\Exception\RuntimeException;
-use Symfony\Component\HttpFoundation\JsonResponse;
 
 class CourseService extends ApiService
 {
@@ -15,6 +13,27 @@ class CourseService extends ApiService
     {
         return [
 
+        ];
+    }
+
+    protected function mapFilters(): array
+    {
+        return [
+            'name' => function ($value) {
+                return static function ($q) use ($value) {
+                    $q->where('name', 'LIKE', "%$value%");
+                };
+            },
+            'user_id' => function($value) {
+                return static function ($q) use ($value) {
+                    $q->where('user_id', $value);
+                };
+            },
+            'is_verify' => function ($value) {
+                return static function ($q) use ($value) {
+                    $q->where('is_verify', $value);
+                };
+            },
         ];
     }
 
