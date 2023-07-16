@@ -16,11 +16,20 @@ class CourseController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show($slug): View
     {
         $course = services()->courseService()->where('slug', $slug)->with(['user', 'lectures', 'users'])->firstOrFail();
 
         return view('course.show', [
+            'course' => $course,
+        ]);
+    }
+
+    public function checkout($slug): View
+    {
+        $course = services()->courseService()->where('slug', $slug)->with(['user', 'lectures', 'users'])->firstOrFail();
+
+        return view('course.checkout', [
             'course' => $course,
         ]);
     }

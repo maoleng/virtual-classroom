@@ -408,15 +408,8 @@
                                     </div>
                                 </div>
 
-                                <div class="add-to-card-button mt--15">
-                                    <a class="rbt-btn btn-gradient icon-hover w-100 d-block text-center" href="#">
-                                        <span class="btn-text">Add to Cart</span>
-                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </a>
-                                </div>
-
                                 <div class="buy-now-btn mt--15">
-                                    <a class="rbt-btn btn-border icon-hover w-100 d-block text-center" href="#">
+                                    <a class="rbt-btn btn-border icon-hover w-100 d-block text-center" href="{{ route('course.checkout', ['slug' => $course->slug]) }}">
                                         <span class="btn-text">Buy Now</span>
                                         <span class="btn-icon"><i class="feather-arrow-right"></i></span>
                                     </a>

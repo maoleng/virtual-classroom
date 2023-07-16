@@ -31,6 +31,11 @@ class Course extends Base
         return $this->users->count();
     }
 
+    public function getLastPriceAttribute(): float
+    {
+        return $this->price * 1.1;
+    }
+
     public function getVideoThumbnailAttribute(): string
     {
         return "https://img.youtube.com/vi/$this->preview_video/0.jpg";
