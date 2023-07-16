@@ -121,8 +121,11 @@
                     </li>
 
                     <li class="access-icon rbt-user-wrapper d-block d-xl-none">
-                        <a class="rbt-round-btn" href="#"><i class="feather-user"></i></a>
-                        <div class="rbt-user-menu-list-wrapper">
+                        @if (authed() === null)
+                            <a class="rbt-btn btn-gradient btn-gradient-2" href="{{ route('auth.redirect') }}">Login</a>
+                        @else
+                            <a class="rbt-round-btn" href="#"><i class="feather-user"></i></a>
+                            <div class="rbt-user-menu-list-wrapper">
                             <div class="inner">
                                 <div class="rbt-admin-profile">
                                     <div class="admin-thumbnail">
@@ -158,6 +161,7 @@
                                 </ul>
                             </div>
                         </div>
+                        @endif
                     </li>
 
                 </ul>

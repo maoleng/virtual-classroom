@@ -3,8 +3,8 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CourseController;
 use App\Http\Controllers\Api\LectureController;
-use App\Http\Middleware\ApiAuthenticate;
-use App\Http\Middleware\TeacherRole;
+use App\Http\Middleware\App\ApiAuthenticate;
+use App\Http\Middleware\App\TeacherRole;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'auth'], static function() {

@@ -42,4 +42,21 @@ class AuthController extends Controller
         return redirect()->route('index');
     }
 
+    public function chooseRole()
+    {
+        if (authed()->role) {
+
+        }
+
+        return view('auth.choose_role');
+    }
+
+    public function processChooseRole(int $role)
+    {
+        authed()->update(['role' => $role]);
+
+        return redirect()->route('index');
+    }
+
+
 }

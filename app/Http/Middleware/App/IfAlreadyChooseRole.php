@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace App\Http\Middleware\App;
 
 use Closure;
 use Illuminate\Http\Request;
 
-class IfAlreadyLogin
+class IfAlreadyChooseRole
 {
     /**
      * Handle an incoming request.
@@ -16,8 +16,7 @@ class IfAlreadyLogin
      */
     public function handle(Request $request, Closure $next)
     {
-        $check = authed();
-        if (isset($check)) {
+        if (isset(authed()->role)) {
             return redirect()->route('index');
         }
 
