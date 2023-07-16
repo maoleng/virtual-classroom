@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->createUsers(20);
         $this->createCourses(50);
         $this->createLectures();
+        $this->createQuestions();
     }
 
     public function createQuestions()

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Question;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 
@@ -42,32 +43,48 @@ class CourseController extends Controller
 
     public function lecture($slug, $lecture_slug): View|RedirectResponse
     {
-        $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'users'])->firstOrFail();
-        $is_registered = services()->courseService()->isRegistered($course);
-        if (! $is_registered) {
-            return redirect()->route('course.show', ['slug', $course->slug]);
+        $data = $this->getLectureData($slug, $lecture_slug);
+        if (! is_array($data)) {
+            return $data;
         }
-        $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
 
-        return view('lecture.index', [
-            'course' => $course,
-            'lecture' => $lecture,
-        ]);
+        return view('lecture.index', $data);
     }
 
     public function lectureDocument($slug, $lecture_slug): View|RedirectResponse
     {
+        $data = $this->getLectureData($slug, $lecture_slug);
+        if (! is_array($data)) {
+            return $data;
+        }
+
+        return view('lecture.document', $data);
+    }
+
+    public function lectureQuestion($slug, $lecture_slug)
+    {
+        $data = $this->getLectureData($slug, $lecture_slug);
+        if (! is_array($data)) {
+            return $data;
+        }
+        $data['questions'] = Question::query()->where('lecture_id', $data['lecture']->id)->where('user_id', authed()->id)
+            ->orderByDesc('created_at')->paginate();
+
+        return view('lecture.question', $data);
+    }
+
+    private function getLectureData($slug, $lecture_slug): array|RedirectResponse
+    {
         $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'users'])->firstOrFail();
-        $is_registered = services()->courseService()->isRegistered($course);
-        if (! $is_registered) {
+        $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
+        if (! services()->courseService()->isRegistered($course)) {
             return redirect()->route('course.show', ['slug', $course->slug]);
         }
-        $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
 
-        return view('lecture.document', [
+        return [
             'course' => $course,
             'lecture' => $lecture,
-        ]);
+        ];
     }
 
 }

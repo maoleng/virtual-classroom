@@ -27,6 +27,7 @@ Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
         Route::get('/{slug}/checkout', [CourseController::class, 'checkout'])->name('checkout');
         Route::get('/{slug}/{lecture_slug}', [CourseController::class, 'lecture'])->name('lecture');
         Route::get('/{slug}/{lecture_slug}/document', [CourseController::class, 'lectureDocument'])->name('lecture_document');
+        Route::get('/{slug}/{lecture_slug}/question', [CourseController::class, 'lectureQuestion'])->name('lecture_question');
     });
 });
 Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function () {
