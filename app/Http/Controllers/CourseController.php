@@ -77,13 +77,24 @@ class CourseController extends Controller
     {
         $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'users'])->firstOrFail();
         $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
+
         if (! services()->courseService()->isRegistered($course)) {
             return redirect()->route('course.show', ['slug', $course->slug]);
         }
 
+        $previous_lecture = $course->lectures->where('order', $lecture->order - 1)->first();
+        $previous_lecture_url = $previous_lecture === null ? null :
+            route('course.lecture', ['slug' => $slug, 'lecture_slug' => $previous_lecture->slug]);
+        $next_lecture = $course->lectures->where('order', $lecture->order + 1)->first();
+        $next_lecture_url = $next_lecture === null ? null :
+            route('course.lecture', ['slug' => $slug, 'lecture_slug' => $next_lecture->slug]);
+
+
         return [
             'course' => $course,
             'lecture' => $lecture,
+            'previous_lecture_url' => $previous_lecture_url,
+            'next_lecture_url' => $next_lecture_url,
         ];
     }
 
