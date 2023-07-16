@@ -136,9 +136,11 @@ class DatabaseSeeder extends Seeder
         foreach ($course_ids as $course_id) {
             $count_lectures = random_int(5, 12);
             for ($i = 1; $i <= $count_lectures; $i++) {
+                $name = $this->faker->sentence(random_int(6, 8));
                 $lectures[] = [
                     'id' => Str::uuid(),
-                    'name' => $this->faker->sentence(random_int(6, 8)),
+                    'name' => $name,
+                    'slug' => Str::slug($name),
                     'document' => $this->faker->randomHtml(6),
                     'video' => 'ji8cjaFUIU0',
                     'order' => $i,

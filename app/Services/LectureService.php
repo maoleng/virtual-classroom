@@ -6,6 +6,7 @@ use App\Enums\UserRole;
 use App\Models\Lecture;
 use Dotenv\Parser\Parser;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class LectureService extends ApiService
 {
@@ -55,7 +56,7 @@ class LectureService extends ApiService
     protected function fields(): array
     {
         return [
-            'name', 'document', 'video', 'order', 'course_id', 'created_at',
+            'name', 'slug', 'document', 'video', 'order', 'course_id', 'created_at',
         ];
     }
 
@@ -66,6 +67,10 @@ class LectureService extends ApiService
         $this->on('creating', function ($model) {
             $model->order = $model->where('course_id', $model->course_id)->count() + 1;
             $model->created_at = now();
+        });
+
+        $this->on('saving', function ($model) {
+            $model->slug = Str::slug($model->name);
         });
 
     }
