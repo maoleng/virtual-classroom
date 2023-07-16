@@ -23,9 +23,11 @@ Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout
 Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
     Route::get('/', [CourseController::class, 'index'])->name('index');
     Route::get('/{slug}', [CourseController::class, 'show'])->name('show');
-    Route::get('/{slug}/checkout', [CourseController::class, 'checkout'])->name('checkout');
-    Route::get('/{slug}/{lecture_slug}', [CourseController::class, 'lecture'])->name('lecture');
-    Route::get('/{slug}/{lecture_slug}/document', [CourseController::class, 'lectureDocument'])->name('lecture_document');
+    Route::group(['middleware' => [MustLogin::class]], function () {
+        Route::get('/{slug}/checkout', [CourseController::class, 'checkout'])->name('checkout');
+        Route::get('/{slug}/{lecture_slug}', [CourseController::class, 'lecture'])->name('lecture');
+        Route::get('/{slug}/{lecture_slug}/document', [CourseController::class, 'lectureDocument'])->name('lecture_document');
+    });
 });
 Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function () {
     Route::post('/{course}', [CheckoutController::class, 'checkout'])->name('process');

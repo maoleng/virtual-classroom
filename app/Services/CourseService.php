@@ -70,4 +70,9 @@ class CourseService extends ApiService
 
     }
 
+    public function isRegistered(Course $course)
+    {
+        return $course->users->where('id', authed()->id)->isNotEmpty();
+    }
+
 }

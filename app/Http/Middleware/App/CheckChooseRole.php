@@ -22,7 +22,6 @@ class CheckChooseRole
      */
     public function handle(Request $request, Closure $next)
     {
-
         if (authed() === null || authed()->role !== null ||
             in_array($request->route()->getName(), ['choose_role', 'process_choose_role'])
         ) {

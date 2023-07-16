@@ -506,13 +506,15 @@
                                     </div>
                                 </div>
 
-                                <div class="buy-now-btn mt--15">
-                                    <a class="rbt-btn btn-border icon-hover w-100 d-block text-center"
-                                       href="{{ route('course.checkout', ['slug' => $course->slug]) }}">
-                                        <span class="btn-text">Buy Now</span>
-                                        <span class="btn-icon"><i class="feather-arrow-right"></i></span>
-                                    </a>
-                                </div>
+                                @if (! $is_registered)
+                                    <div class="buy-now-btn mt--15">
+                                        <a class="rbt-btn btn-border icon-hover w-100 d-block text-center"
+                                           href="{{ route('course.checkout', ['slug' => $course->slug]) }}">
+                                            <span class="btn-text">Buy Now</span>
+                                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                        </a>
+                                    </div>
+                                @endif
 
                                 <span class="subtitle"><i class="feather-rotate-ccw"></i> 30-Day Money-Back
                                     Guarantee</span>

@@ -23,7 +23,7 @@ class MustLogin
     public function handle(Request $request, Closure $next)
     {
         if (authed() === null) {
-            return redirect()->back();
+            return redirect()->route('index');
         }
 
         return $next($request);

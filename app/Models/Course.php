@@ -53,7 +53,7 @@ class Course extends Base
 
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class, 'courses_users');
+        return $this->belongsToMany(User::class, 'courses_users')->withPivot(['price']);
     }
 
 }
