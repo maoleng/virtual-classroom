@@ -14,4 +14,9 @@ class Lecture extends Base
         return "https://img.youtube.com/vi/$this->video/0.jpg";
     }
 
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
+
 }

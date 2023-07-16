@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\Api\LectureController;
 use App\Http\Middleware\ApiAuthenticate;
 use App\Http\Middleware\TeacherRole;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,16 @@ Route::group(['prefix' => 'app', 'middleware' => [ApiAuthenticate::class]], stat
         Route::put('/{id}', [CourseController::class, 'update']);
         Route::delete('/{id}', [CourseController::class, 'destroy']);
     });
+    Route::group(['prefix' => 'lecture'], static function () {
+        Route::get('/', [LectureController::class, 'index']);
+        Route::get('/{id}', [LectureController::class, 'show']);
+        Route::group(['middleware' => [TeacherRole::class]], static function () {
+            Route::post('/', [LectureController::class, 'store']);
+            Route::put('/{id}', [LectureController::class, 'update']);
+            Route::delete('/{id}', [LectureController::class, 'destroy']);
+        });
+    });
+
 
 
 });
