@@ -14,6 +14,6 @@ Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
 });
 Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function () {
     Route::post('/{course}', [CheckoutController::class, 'checkout'])->name('process');
-    Route::get('/success', [CheckoutController::class, 'success'])->name('success');
+    Route::get('/success', [CheckoutController::class, 'validatePayment'])->name('success');
 });
 
