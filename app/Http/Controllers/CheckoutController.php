@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
 {
 
-    public function checkout(Course $course, Request $request): RedirectResponse
+    public function checkout(Request $request, Course $course): RedirectResponse
     {
         if ($request->get('is_accept') === null) {
             return redirect()->back()->with(['error' => 'Please Accept The Terms & Conditions']);
@@ -18,7 +19,7 @@ class CheckoutController extends Controller
         return redirect()->to($this->createPaymentUrl($course->lastPrice, $request->get('payment_method'), $course->id));
     }
 
-    public function validatePayment(Request $request)
+    public function validatePayment(Request $request): View
     {
         $inputData = [];
         foreach ($_GET as $key => $value) {
@@ -48,6 +49,7 @@ class CheckoutController extends Controller
             abort(403, 'Bad request');
         }
         $course = Course::query()->find($data['vnp_OrderInfo']);
+
 
         return view('course.checkout_success', [
             'course' => $course,

@@ -18,6 +18,13 @@ if (! function_exists('c')) {
     }
 }
 
+if (! function_exists('authed')) {
+    function authed()
+    {
+        return session()->get('authed');
+    }
+}
+
 if (! function_exists('services')) {
     function services(): MapService
     {

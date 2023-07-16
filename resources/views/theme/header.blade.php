@@ -75,10 +75,97 @@
                         </ul>
                     </nav>
                 </div>
+                <ul class="quick-access">
+                    <li class="account-access rbt-user-wrapper d-none d-xl-block">
+                        @if (authed() === null)
+                            <a class="rbt-btn btn-gradient btn-gradient-2" href="{{ route('auth.redirect') }}">Login</a>
+                        @else
+                            <a href="#"><i class="feather-user"></i>Admin</a>
+                            <div class="rbt-user-menu-list-wrapper">
+                                <div class="inner">
+                                    <div class="rbt-admin-profile">
+                                        <div class="admin-thumbnail">
+                                            <img src="{{ authed()->avatar }}" alt="User Images">
+                                        </div>
+                                        <div class="admin-info">
+                                            <span class="name">{{ authed()->name }}</span>
+                                            <a class="rbt-btn-link color-primary" href="#">View Profile</a>
+                                        </div>
+                                    </div>
+                                    <ul class="user-list-wrapper">
+                                        <li>
+                                            <a href="#">
+                                                <i class="feather-home"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <hr class="mt--10 mb--10">
+                                    <ul class="user-list-wrapper">
+                                        <li>
+                                            <a href="#">
+                                                <i class="feather-settings"></i>
+                                                <span>Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('auth.logout') }}">
+                                                <i class="feather-log-out"></i>
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        @endif
+                    </li>
+
+                    <li class="access-icon rbt-user-wrapper d-block d-xl-none">
+                        <a class="rbt-round-btn" href="#"><i class="feather-user"></i></a>
+                        <div class="rbt-user-menu-list-wrapper">
+                            <div class="inner">
+                                <div class="rbt-admin-profile">
+                                    <div class="admin-thumbnail">
+                                        <img src="{{ authed()->avatar }}" alt="User Images">
+                                    </div>
+                                    <div class="admin-info">
+                                        <span class="name">{{ authed()->name }}</span>
+                                        <a class="rbt-btn-link color-primary" href="#">View Profile</a>
+                                    </div>
+                                </div>
+                                <ul class="user-list-wrapper">
+                                    <li>
+                                        <a href="#">
+                                            <i class="feather-home"></i>
+                                            <span>Dashboard</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <hr class="mt--10 mb--10">
+                                <ul class="user-list-wrapper">
+                                    <li>
+                                        <a href="#">
+                                            <i class="feather-settings"></i>
+                                            <span>Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('auth.logout') }}">
+                                            <i class="feather-log-out"></i>
+                                            <span>Logout</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
                 <div class="header-right">
                     <div class="rbt-btn-wrapper d-none d-xl-block">
-                        <a class="rbt-btn rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none" href="https://themeforest.net/checkout/from_item/42846507?license=regular">
-                            <span data-text="Purchase Now">Purchase Now</span>
+                        <a class="rbt-btn rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none" href="{{ route('course.index') }}">
+                            <span data-text="Purchase Now">Start Learning</span>
                         </a>
                     </div>
                     <!-- Start Mobile-Menu-Bar -->
