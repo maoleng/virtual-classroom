@@ -80,7 +80,7 @@
                         @if (authed() === null)
                             <a class="rbt-btn btn-gradient btn-gradient-2" href="{{ route('auth.redirect') }}">Login</a>
                         @else
-                            <a href="#"><i class="feather-user"></i>Admin</a>
+                            <a href="#"><i class="feather-user"></i>{{ authed()->name }}</a>
                             <div class="rbt-user-menu-list-wrapper">
                                 <div class="inner">
                                     <div class="rbt-admin-profile">
