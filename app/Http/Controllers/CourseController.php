@@ -34,4 +34,26 @@ class CourseController extends Controller
         ]);
     }
 
+    public function lecture($slug, $lecture_slug)
+    {
+        $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'users'])->firstOrFail();
+        $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
+
+        return view('lecture.index', [
+            'course' => $course,
+            'lecture' => $lecture,
+        ]);
+    }
+
+    public function lectureDocument($slug, $lecture_slug)
+    {
+        $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'users'])->firstOrFail();
+        $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
+
+        return view('lecture.document', [
+            'course' => $course,
+            'lecture' => $lecture,
+        ]);
+    }
+
 }

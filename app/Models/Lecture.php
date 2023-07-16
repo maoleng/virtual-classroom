@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use GuzzleHttp\Client;
+
 class Lecture extends Base
 {
 
@@ -12,6 +14,11 @@ class Lecture extends Base
     public function getVideoThumbnailAttribute(): string
     {
         return "https://img.youtube.com/vi/$this->video/0.jpg";
+    }
+
+    public function getVideoEmbedUrlAttribute(): string
+    {
+        return "https://www.youtube.com/embed/$this->video";
     }
 
     public function course()
