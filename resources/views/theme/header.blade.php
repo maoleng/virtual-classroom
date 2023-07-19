@@ -25,19 +25,20 @@
                                     <div class="wrapper">
                                         <div class="row row--15 home-plesentation-wrapper single-dropdown-menu-presentation">
 
-                                            <!-- Start Single Demo  -->
-                                            <div class="col-lg-12 col-xl-2 col-xxl-2 col-md-12 col-sm-12 col-12 single-mega-item">
-                                                <div class="demo-single">
-                                                    <div class="inner">
-                                                        <div class="thumbnail">
-                                                            <a href="01-main-demo.html"><img src="{{ asset('assets/images/splash/demo/h1.jpg') }}" alt="Demo Images"></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <h4 class="title"><a href="01-main-demo.html">Home Demo <span class="btn-icon"><i class="feather-arrow-right"></i></span></a></h4>
+                                            @foreach ($courses as $course)
+                                                <div class="col-lg-12 col-xl-2 col-xxl-2 col-md-12 col-sm-12 col-12 single-mega-item">
+                                                    <div class="demo-single">
+                                                        <div class="inner">
+                                                            <div class="thumbnail">
+                                                                <a href="{{ route('course.show', ['slug' => $course->slug]) }}"><img src="{{ $course->thumbnail }}" alt="Demo Images"></a>
+                                                            </div>
+                                                            <div class="content">
+                                                                <h4 class="title"><a href="{{ route('course.show', ['slug' => $course->slug]) }}">{{ $course->name }} <span class="btn-icon"><i class="feather-arrow-right"></i></span></a></h4>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            @endforeach
                                             <!-- End Single Demo  -->
 
                                             <!-- Start Single Demo  -->
@@ -45,10 +46,10 @@
                                                 <div class="demo-single">
                                                     <div class="inner">
                                                         <div class="thumbnail">
-                                                            <a href="#"><img src="{{ asset('assets/images/splash/demo/coming-soon-3.png') }}" alt="Demo Images"></a>
+                                                            <a href="{{ route('course.index') }}"><img src="{{ asset('assets/images/splash/demo/coming-soon-3.png') }}" alt="Demo Images"></a>
                                                         </div>
                                                         <div class="content">
-                                                            <h4 class="title"><a href="#">Orthers<span class="btn-icon"><i class="feather-arrow-right"></i></span></a></h4>
+                                                            <h4 class="title"><a href="{{ route('course.index') }}">Others<span class="btn-icon"><i class="feather-arrow-right"></i></span></a></h4>
                                                         </div>
                                                     </div>
                                                 </div>
