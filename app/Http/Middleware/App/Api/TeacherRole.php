@@ -22,10 +22,6 @@ class TeacherRole
      */
     public function handle(Request $request, Closure $next)
     {
-        if (authed() !== null && authed()->role !== UserRole::TEACHER) {
-
-        }
-
         if (c('authed')->role !== UserRole::TEACHER) {
             return new JsonResponse([
                 'status' => false,
