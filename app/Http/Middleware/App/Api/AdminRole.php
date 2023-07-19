@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware\App;
+namespace App\Http\Middleware\App\Api;
 
 use App\Enums\UserRole;
 use Closure;
@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
-class TeacherRole
+class AdminRole
 {
     /**
      * Handle an incoming request.
@@ -22,10 +22,10 @@ class TeacherRole
      */
     public function handle(Request $request, Closure $next)
     {
-        if (c('authed')->role !== UserRole::TEACHER) {
+        if (c('authed')->role !== UserRole::ADMIN) {
             return new JsonResponse([
                 'status' => false,
-                'message' => trans('messages.you_are_not_teacher'),
+                'message' => trans('messages.you_are_not_admin'),
             ], Response::HTTP_BAD_REQUEST);
         }
 
