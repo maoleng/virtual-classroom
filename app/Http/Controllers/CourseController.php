@@ -18,6 +18,11 @@ class CourseController extends Controller
         ]);
     }
 
+    public function create()
+    {
+        return view('course.create');
+    }
+
     public function show($slug): View
     {
         $course = services()->courseService()->where('slug', $slug)->with(['user', 'lectures', 'users'])->firstOrFail();
@@ -67,15 +72,13 @@ class CourseController extends Controller
         if (! is_array($data)) {
             return $data;
         }
-        $data['questions'] = Question::query()->where('lecture_id', $data['lecture']->id)->where('user_id', authed()->id)
-            ->orderByDesc('created_at')->paginate();
 
         return view('lecture.question', $data);
     }
 
     private function getLectureData($slug, $lecture_slug): array|RedirectResponse
     {
-        $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'users'])->firstOrFail();
+        $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'user', 'users'])->firstOrFail();
         $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
 
         if (! services()->courseService()->isRegistered($course)) {
@@ -89,10 +92,15 @@ class CourseController extends Controller
         $next_lecture_url = $next_lecture === null ? null :
             route('course.lecture', ['slug' => $slug, 'lecture_slug' => $next_lecture->slug]);
 
+        $questions = Question::query()->where('lecture_id', $lecture->id)
+            ->where(function ($q) {
+                $q->orWhere('user_id', authed()->id)->orWhereNull('user_id');
+            })->orderBy('created_at')->get();
 
         return [
             'course' => $course,
             'lecture' => $lecture,
+            'questions' => $questions,
             'previous_lecture_url' => $previous_lecture_url,
             'next_lecture_url' => $next_lecture_url,
         ];

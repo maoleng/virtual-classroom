@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\LectureController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\LectureInteractController;
 use App\Http\Controllers\SiteController;
 use App\Http\Middleware\App\IfAlreadyChooseRole;
 use App\Http\Middleware\App\IfAlreadyLogin;
@@ -22,12 +24,14 @@ Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout
 
 Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
     Route::get('/', [CourseController::class, 'index'])->name('index');
+    Route::get('/create', [CourseController::class, 'create'])->name('create');
     Route::get('/{slug}', [CourseController::class, 'show'])->name('show');
     Route::group(['middleware' => [MustLogin::class]], function () {
         Route::get('/{slug}/checkout', [CourseController::class, 'checkout'])->name('checkout');
         Route::get('/{slug}/{lecture_slug}', [CourseController::class, 'lecture'])->name('lecture');
         Route::get('/{slug}/{lecture_slug}/document', [CourseController::class, 'lectureDocument'])->name('lecture_document');
         Route::get('/{slug}/{lecture_slug}/question', [CourseController::class, 'lectureQuestion'])->name('lecture_question');
+        Route::post('/ask', [LectureController::class, 'ask'])->name('ask');
     });
 });
 Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function () {
