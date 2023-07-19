@@ -68,7 +68,9 @@ if (! function_exists('currentFunction')) {
 if (! function_exists('authedIsTeacher')) {
     function authedIsTeacher(): bool
     {
-        return c('authed')->role === UserRole::TEACHER;
+        return class_exists('authed') ?
+            c('authed')->role === UserRole::TEACHER :
+            authed() !== null && authed()->role === UserRole::TEACHER;
     }
 }
 

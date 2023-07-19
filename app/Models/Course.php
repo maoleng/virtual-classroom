@@ -13,7 +13,7 @@ class Course extends Base
 
     protected $fillable = [
         'name', 'slug', 'thumbnail', 'title', 'description', 'preview_video', 'duration', 'price', 'user_id', 'is_verify',
-        'rating', 'created_at',
+        'is_qa', 'rating', 'created_at',
     ];
 
     public function getLimitDescriptionAttribute(): string

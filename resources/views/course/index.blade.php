@@ -1,3 +1,4 @@
+@php use App\Enums\UserRole; @endphp
 @extends('theme.master')
 
 @section('body')
@@ -25,11 +26,18 @@
                             <div class=" title-wrapper">
                                 <h1 class="title mb--0">All Courses</h1>
                                 <a href="#" class="rbt-badge-2">
-                                    <div class="image">🎉</div> 50 Courses
+                                    <div class="image">🎉</div>
+                                    50 Courses
                                 </a>
                             </div>
 
-                            <p class="description">Courses that help beginner designers become true unicorns. </p>
+                            <p class="description">
+                                Courses that help beginner designers become true unicorns.
+                                @if (authedIsTeacher())
+                                    <a class="btn-underline-gradient" href="{{ route('course.create') }}">Create</a>
+                                @endif
+                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -44,8 +52,14 @@
                             <div class="rbt-sorting-list d-flex flex-wrap align-items-center">
                                 <div class="rbt-short-item switch-layout-container">
                                     <ul class="course-switch-layout">
-                                        <li class="course-switch-item"><button class="rbt-grid-view active" title="Grid Layout"><i class="feather-grid"></i> <span class="text">Grid</span></button></li>
-                                        <li class="course-switch-item"><button class="rbt-list-view" title="List Layout"><i class="feather-list"></i> <span class="text">List</span></button></li>
+                                        <li class="course-switch-item">
+                                            <button class="rbt-grid-view active" title="Grid Layout"><i
+                                                    class="feather-grid"></i> <span class="text">Grid</span></button>
+                                        </li>
+                                        <li class="course-switch-item">
+                                            <button class="rbt-list-view" title="List Layout"><i
+                                                    class="feather-list"></i> <span class="text">List</span></button>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="rbt-short-item">
@@ -54,7 +68,8 @@
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-12">
-                            <div class="rbt-sorting-list d-flex flex-wrap align-items-end justify-content-start justify-content-lg-end">
+                            <div
+                                class="rbt-sorting-list d-flex flex-wrap align-items-end justify-content-start justify-content-lg-end">
                                 <div class="rbt-short-item">
                                     <form action="#" class="rbt-search-style me-0">
                                         <input type="text" placeholder="Search Your Course..">
@@ -98,63 +113,70 @@
 
                                 @foreach ($courses as $course)
                                     <div class="course-grid-3">
-                                    <div class="rbt-card variation-01 rbt-hover">
-                                        <div class="rbt-card-img">
-                                            <a href="{{ route('course.show', ['slug' => $course->slug]) }}">
-                                                <img src="{{ $course->thumbnail }}" alt="Card image">
-                                                <div class="rbt-badge-3 bg-white">
-                                                    <span>-40%</span>
-                                                    <span>Off</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="rbt-card-body">
-                                            <div class="rbt-card-top">
-                                                <div class="rbt-review">
-                                                    <div class="rating">
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
-                                                        <i class="fas fa-star"></i>
+                                        <div class="rbt-card variation-01 rbt-hover">
+                                            <div class="rbt-card-img">
+                                                <a href="{{ route('course.show', ['slug' => $course->slug]) }}">
+                                                    <img src="{{ $course->thumbnail }}" alt="Card image">
+                                                    <div class="rbt-badge-3 bg-white">
+                                                        <span>-40%</span>
+                                                        <span>Off</span>
                                                     </div>
-                                                    <span class="rating-count"> (15 Reviews)</span>
-                                                </div>
-                                                <div class="rbt-bookmark-btn">
-                                                    <a class="rbt-round-btn" title="Bookmark" href="#"><i
-                                                            class="feather-bookmark"></i></a>
-                                                </div>
+                                                </a>
                                             </div>
-
-                                            <h4 class="rbt-card-title"><a href="{{ route('course.show', ['slug' => $course->slug]) }}">{{ $course->name }}</a>
-                                            </h4>
-
-                                            <ul class="rbt-meta">
-                                                <li><i class="feather-book"></i>{{ $course->lectures_count }} Lessons</li>
-                                                <li><i class="feather-users"></i>50 Students</li>
-                                            </ul>
-
-                                            <p class="rbt-card-text">{{ $course->limitDescription }}</p>
-                                            <div class="rbt-author-meta mb--10">
-                                                <div class="rbt-avater">
-                                                    <a href="#">
-                                                        <img src="{{ $course->user->avatar }}" alt="">
-                                                    </a>
+                                            <div class="rbt-card-body">
+                                                <div class="rbt-card-top">
+                                                    <div class="rbt-review">
+                                                        <div class="rating">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                        <span class="rating-count"> (15 Reviews)</span>
+                                                    </div>
+                                                    <div class="rbt-bookmark-btn">
+                                                        <a class="rbt-round-btn" title="Bookmark" href="#"><i
+                                                                class="feather-bookmark"></i></a>
+                                                    </div>
                                                 </div>
-                                                <div class="rbt-author-info">
-                                                    By <a href="#">{{ $course->user->name }}</a>
+
+                                                <h4 class="rbt-card-title"><a
+                                                        href="{{ route('course.show', ['slug' => $course->slug]) }}">{{ $course->name }}</a>
+                                                </h4>
+
+                                                <ul class="rbt-meta">
+                                                    <li><i class="feather-book"></i>{{ $course->lectures_count }}
+                                                        Lessons
+                                                    </li>
+                                                    <li><i class="feather-users"></i>50 Students</li>
+                                                </ul>
+
+                                                <p class="rbt-card-text">{{ $course->limitDescription }}</p>
+                                                <div class="rbt-author-meta mb--10">
+                                                    <div class="rbt-avater">
+                                                        <a href="#">
+                                                            <img src="{{ $course->user->avatar }}" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="rbt-author-info">
+                                                        By <a href="#">{{ $course->user->name }}</a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="rbt-card-bottom">
-                                                <div class="rbt-price">
-                                                    <span class="current-price">{{ prettyPrice($course->price) }}</span>
-                                                    <span class="off-price">{{ prettyPrice($course->price * 2) }}</span>
+                                                <div class="rbt-card-bottom">
+                                                    <div class="rbt-price">
+                                                        <span
+                                                            class="current-price">{{ prettyPrice($course->price) }}</span>
+                                                        <span
+                                                            class="off-price">{{ prettyPrice($course->price * 2) }}</span>
+                                                    </div>
+                                                    <a class="rbt-btn-link"
+                                                       href="{{ route('course.show', ['slug' => $course->slug]) }}">Learn
+                                                        More<i class="feather-arrow-right"></i></a>
                                                 </div>
-                                                <a class="rbt-btn-link" href="{{ route('course.show', ['slug' => $course->slug]) }}">Learn More<i class="feather-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 @endforeach
 
                             </div>

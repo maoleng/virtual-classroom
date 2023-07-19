@@ -4,8 +4,8 @@ use App\Http\Controllers\Api\LectureController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CourseController;
-use App\Http\Controllers\LectureInteractController;
 use App\Http\Controllers\SiteController;
+use App\Http\Middleware\App\TeacherRole;
 use App\Http\Middleware\App\IfAlreadyChooseRole;
 use App\Http\Middleware\App\IfAlreadyLogin;
 use App\Http\Middleware\App\MustLogin;
@@ -24,7 +24,7 @@ Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout
 
 Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
     Route::get('/', [CourseController::class, 'index'])->name('index');
-    Route::get('/create', [CourseController::class, 'create'])->name('create');
+    Route::get('/create', [CourseController::class, 'create'])->name('create')->middleware(TeacherRole::class);
     Route::get('/{slug}', [CourseController::class, 'show'])->name('show');
     Route::group(['middleware' => [MustLogin::class]], function () {
         Route::get('/{slug}/checkout', [CourseController::class, 'checkout'])->name('checkout');
