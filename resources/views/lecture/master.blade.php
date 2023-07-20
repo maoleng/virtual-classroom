@@ -125,11 +125,58 @@
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
 </div>
+
+<div class="rbt-cart-side-menu">
+    <div class="inner-wrapper">
+        <div class="inner-top">
+            <div class="content">
+                <div class="title">
+                    <h4 class="title mb--0">Interact with Lecture</h4>
+                </div>
+                <div class="rbt-btn-close" id="btn_sideNavClose">
+                    <button class="minicart-close-button rbt-round-btn"><i class="feather-x"></i></button>
+                </div>
+            </div>
+        </div>
+        <nav class="side-nav w-100">
+            <ul id="ul-chat" class="rbt-minicart-wrapper">
+                @foreach ($questions as $i => $question)
+                    <li class="minicart-item">
+                        <div class="thumbnail">
+                            <a href="#">
+                                <img src="{{ $question->authorAvatar }}" alt="Product Images">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <h6 class="title">{{ $question->authorName }}</h6>
+                            <span class="quantity">{{ $question->content }}</span>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </nav>
+
+        <div class="rbt-minicart-footer">
+            <hr class="mb--0">
+            <div class="rbt-minicart-bottom mt--20">
+                <div class="form-group">
+                    <input id="i-content" type="text">
+                    <label>Ask {{ $course->user->name }}</label>
+                    <span class="focus-border"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 @include('theme.script')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(document).ready(() => {
-        scrollToLastChat()
+        @if ($questions->isNotEmpty())
+            scrollToLastChat()
+        @endif
         $('#i-content').on('keypress',function(e) {
             if(e.which !== 13) {
                 return
@@ -186,46 +233,4 @@
 </body>
 
 </html>
-<div class="rbt-cart-side-menu">
-    <div class="inner-wrapper">
-        <div class="inner-top">
-            <div class="content">
-                <div class="title">
-                    <h4 class="title mb--0">Interact with Lecture</h4>
-                </div>
-                <div class="rbt-btn-close" id="btn_sideNavClose">
-                    <button class="minicart-close-button rbt-round-btn"><i class="feather-x"></i></button>
-                </div>
-            </div>
-        </div>
-        <nav class="side-nav w-100">
-            <ul id="ul-chat" class="rbt-minicart-wrapper">
-                @foreach ($questions as $i => $question)
-                    <li class="minicart-item">
-                        <div class="thumbnail">
-                            <a href="#">
-                                <img src="{{ $question->authorAvatar }}" alt="Product Images">
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <h6 class="title">{{ $question->authorName }}</h6>
-                            <span class="quantity">{{ $question->content }}</span>
-                        </div>
-                    </li>
-                @endforeach
-            </ul>
-        </nav>
 
-        <div class="rbt-minicart-footer">
-            <hr class="mb--0">
-            <div class="rbt-minicart-bottom mt--20">
-                <div class="form-group">
-                    <input id="i-content" type="text">
-                    <label>Ask {{ $course->user->name }}</label>
-                    <span class="focus-border"></span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
