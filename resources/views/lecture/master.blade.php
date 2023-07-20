@@ -208,12 +208,12 @@
                         <li class="minicart-item">
                             <div class="thumbnail">
                                 <a href="#">
-                                    <img src="${e.authorAvatar}" alt="Product Images">
+                                    <img src="${e.data.authorAvatar}" alt="Product Images">
                                 </a>
                             </div>
                             <div class="product-content">
-                                <h6 class="title">${e.authorName}</h6>
-                                <span class="quantity">${e.content}</span>
+                                <h6 class="title">${e.data.authorName}</h6>
+                                <span class="quantity">${e.data.content}</span>
                             </div>
                         </li>
                     `)

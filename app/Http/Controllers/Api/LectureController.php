@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Requests\Lecture\AskRequest;
 use App\Http\Requests\Lecture\StoreRequest;
 use App\Http\Requests\Lecture\UpdateRequest;
+use App\Models\Course;
 use App\Models\Question;
 use App\Services\LectureService;
 use Illuminate\Http\Request;
@@ -26,9 +28,9 @@ class LectureController extends ApiController
         return c(UpdateRequest::class);
     }
 
-    public function ask(Request $request)
+    public function ask(AskRequest $request): array
     {
-        $data = $request->all();
+        $data = $request->validated();
         Question::query()->create([
             'content' => $data['content'],
             'lecture_id' => $data['lecture_id'],
@@ -42,9 +44,12 @@ class LectureController extends ApiController
         ]);
 
         return [
-            'authorName' => $answer->authorName,
-            'authorAvatar' => $answer->authorAvatar,
-            'content' => $answer->content,
+            'status' => true,
+            'data' => [
+                'authorName' => $answer->authorName,
+                'authorAvatar' => $answer->authorAvatar,
+                'content' => $answer->content,
+            ],
         ];
     }
 

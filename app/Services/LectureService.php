@@ -39,7 +39,7 @@ class LectureService extends ApiService
     public function newQuery()
     {
         $query = parent::newQuery();
-        $user = c('authed');
+        $user = authed();
         if ($user->role === UserRole::TEACHER) {
             $query->whereHas('course', function ($q) use ($user) {
                 $q->where('user_id', $user);

@@ -26,6 +26,7 @@ Route::group(['prefix' => 'app', 'middleware' => [ApiAuthenticate::class]], stat
     Route::group(['prefix' => 'lecture'], static function () {
         Route::get('/', [LectureController::class, 'index']);
         Route::get('/{id}', [LectureController::class, 'show']);
+        Route::post('/ask', [LectureController::class, 'ask']);
         Route::group(['middleware' => [TeacherRole::class]], static function () {
             Route::post('/', [LectureController::class, 'store']);
             Route::put('/{id}', [LectureController::class, 'update']);
