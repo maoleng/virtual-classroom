@@ -50,19 +50,19 @@ class CourseService extends ApiService
         parent::boot();
 
         $this->on('creating', function ($model) {
-            $model->user_id = c('authed')->id;
+            $model->user_id = authed()->id;
             $model->created_at = now();
             $model->rating = (float) (random_int(3, 4).'.'.random_int(1, 9));
         });
 
         $this->on('updating', function ($model) {
-            if ($model->user_id !== c('authed')->id) {
+            if ($model->user_id !== authed()->id) {
                 throw new \RuntimeException(trans('messages.not_your_course'));
             }
         });
 
         $this->on('deleting', function ($model) {
-            if ($model->user_id !== c('authed')->id) {
+            if ($model->user_id !== authed()->id) {
                 throw new \RuntimeException(trans('messages.not_your_course'));
             }
         });
@@ -70,7 +70,7 @@ class CourseService extends ApiService
 
     }
 
-    public function isRegistered(Course $course)
+    public function isRegistered(Course $course): bool
     {
         return authed() === null ?
             false :

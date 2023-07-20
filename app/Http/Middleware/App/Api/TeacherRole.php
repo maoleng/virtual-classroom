@@ -22,7 +22,7 @@ class TeacherRole
      */
     public function handle(Request $request, Closure $next)
     {
-        if (c('authed')->role !== UserRole::TEACHER) {
+        if (authed()?->role !== UserRole::TEACHER) {
             return new JsonResponse([
                 'status' => false,
                 'message' => trans('messages.you_are_not_teacher'),

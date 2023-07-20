@@ -21,7 +21,15 @@ if (! function_exists('c')) {
 if (! function_exists('authed')) {
     function authed()
     {
-        return session()->get('authed');
+        try {
+            return c('authed');
+        } catch (Throwable $e) {
+            if ($e->getMessage() === 'Target class [authed] does not exist.') {
+                return session()->get('authed');
+            }
+
+            return null;
+        }
     }
 }
 
@@ -68,16 +76,14 @@ if (! function_exists('currentFunction')) {
 if (! function_exists('authedIsTeacher')) {
     function authedIsTeacher(): bool
     {
-        return class_exists('authed') ?
-            c('authed')->role === UserRole::TEACHER :
-            authed() !== null && authed()->role === UserRole::TEACHER;
+        return ! (authed() === null) && authed()->role === UserRole::TEACHER;
     }
 }
 
 if (! function_exists('authedIsStudent')) {
     function authedIsStudent(): bool
     {
-        return c('authed')->role === UserRole::STUDENT;
+        return authed()?->role === UserRole::STUDENT;
     }
 }
 

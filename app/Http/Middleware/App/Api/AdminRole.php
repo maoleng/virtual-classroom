@@ -22,7 +22,7 @@ class AdminRole
      */
     public function handle(Request $request, Closure $next)
     {
-        if (c('authed')->role !== UserRole::ADMIN) {
+        if (authed()->role !== UserRole::ADMIN) {
             return new JsonResponse([
                 'status' => false,
                 'message' => trans('messages.you_are_not_admin'),
