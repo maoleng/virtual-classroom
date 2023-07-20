@@ -66,14 +66,24 @@ class CourseController extends Controller
         return view('lecture.document', $data);
     }
 
-    public function lectureQuestion($slug, $lecture_slug)
+    public function quiz($slug, $lecture_slug)
     {
         $data = $this->getLectureData($slug, $lecture_slug);
         if (! is_array($data)) {
             return $data;
         }
 
-        return view('lecture.question', $data);
+        return view('lecture.quiz', $data);
+    }
+
+    public function quizResult($slug, $lecture_slug)
+    {
+        $data = $this->getLectureData($slug, $lecture_slug);
+        if (! is_array($data)) {
+            return $data;
+        }
+
+        return view('lecture.quiz_result', $data);
     }
 
     private function getLectureData($slug, $lecture_slug): array|RedirectResponse

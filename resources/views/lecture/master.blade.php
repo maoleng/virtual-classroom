@@ -59,9 +59,9 @@
                                             </li>
 
                                             <li>
-                                                <a href="{{ route('course.lecture_question', ['slug' => $course->slug, 'lecture_slug' => Str::slug($each_lecture->name)]) }}">
+                                                <a href="{{ route('course.quiz', ['slug' => $course->slug, 'lecture_slug' => Str::slug($each_lecture->name)]) }}">
                                                     <div class="course-content-left">
-                                                        <i class="feather-activity"></i> <span class="text">Question</span>
+                                                        <i class="feather-activity"></i> <span class="text">Quiz</span>
                                                     </div>
                                                     <div class="course-content-right">
                                                         <span class="rbt-check"><i class="feather-check"></i></span>
