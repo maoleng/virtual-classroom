@@ -69,6 +69,17 @@
                                                 </a>
                                             </li>
 
+                                            <li>
+                                                <a href="{{ route('course.teacher_interact', ['slug' => $course->slug, 'lecture_slug' => Str::slug($each_lecture->name)]) }}">
+                                                    <div class="course-content-left">
+                                                        <i class="feather-edit"></i> <span class="text">Teacher Interact</span>
+                                                    </div>
+                                                    <div class="course-content-right">
+                                                        <span class="rbt-check"><i class="feather-check"></i></span>
+                                                    </div>
+                                                </a>
+                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>

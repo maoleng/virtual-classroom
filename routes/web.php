@@ -34,6 +34,7 @@ Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
         Route::get('/{slug}/{lecture_slug}/quiz_result', [CourseController::class, 'quizResult'])->name('quiz_result');
         Route::get('/{slug}/{lecture_slug}/assignment', [CourseController::class, 'assignment'])->name('assignment');
         Route::get('/{slug}/{lecture_slug}/assignment_submit', [CourseController::class, 'assignmentSubmit'])->name('assignment_submit');
+        Route::get('/{slug}/{lecture_slug}/teacher_interact', [CourseController::class, 'teacherInteract'])->name('teacher_interact');
         Route::post('/ask', [LectureController::class, 'ask'])->name('ask');
     });
 });
