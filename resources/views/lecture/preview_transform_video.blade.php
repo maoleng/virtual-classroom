@@ -79,6 +79,8 @@
 @section('script')
     <script>
         $(document).ready(function() {
+            const video = $('video')[0]
+
             let cur = 1
             $('#btn-back').on('click', () => {
                 $('#btn-s-back').click()
@@ -99,7 +101,8 @@
             function changeVideo()
             {
                 $('source').attr('src', '{{ asset('assets/images/transform-video/') }}' + '/' + cur + '.mp4')
-                $('video')[0].load()
+                video.load()
+                video.play()
             }
         })
     </script>
