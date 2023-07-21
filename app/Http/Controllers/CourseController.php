@@ -11,7 +11,7 @@ class CourseController extends Controller
 
     public function index(): View
     {
-        $courses = services()->courseService()->withCount('lectures')->with('user')->paginate(6);
+        $courses = services()->courseService()->withCount('lectures')->with('user')->orderByDesc('created_at')->paginate(6);
 
         return view('course.index', [
             'courses' => $courses,
@@ -122,7 +122,7 @@ class CourseController extends Controller
         $lecture = $course->lectures->where('slug', $lecture_slug)->firstOrFail();
 
         if (! services()->courseService()->isRegistered($course)) {
-            return redirect()->route('course.show', ['slug', $course->slug]);
+            return back();
         }
 
         $previous_lecture = $course->lectures->where('order', $lecture->order - 1)->first();
