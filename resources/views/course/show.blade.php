@@ -514,11 +514,16 @@
                                             <span class="btn-icon"><i class="feather-arrow-right"></i></span>
                                         </a>
                                     </div>
+                                    <span class="subtitle"><i class="feather-rotate-ccw"></i> 30-Day Money-BackGuarantee</span>
+                                @else
+                                    <div class="buy-now-btn mt--15">
+                                        <a class="rbt-btn btn-border icon-hover w-100 d-block text-center"
+                                           href="{{ route('course.lecture', ['slug' => $course->slug, 'lecture_slug' => Str::slug($course->lectures[0]->name)]) }}">
+                                            <span class="btn-text">Learn now</span>
+                                            <span class="btn-icon"><i class="feather-arrow-right"></i></span>
+                                        </a>
+                                    </div>
                                 @endif
-
-                                <span class="subtitle"><i class="feather-rotate-ccw"></i> 30-Day Money-Back
-                                    Guarantee</span>
-
 
                                 <div class="rbt-widget-details has-show-more">
                                     <ul class="has-show-more-inner-content rbt-course-details-list-wrapper">
