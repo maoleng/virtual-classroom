@@ -44,9 +44,6 @@ class DatabaseSeeder extends Seeder
                     $questions[] = [
                         'id' => Str::uuid(),
                         'content' => $this->faker->sentence(10),
-                        'text_answer' => 'Xin chào thế giới',
-                        'audio_answer' => 'https://chunk.lab.zalo.ai/0a3560510333ea6db322/0a3560510333ea6db322',
-                        'video_answer' => 'https://cdn.discordapp.com/attachments/1005135147613573190/1124554958541422622/mew.mp4',
                         'lecture_id' => $lecture_id,
                         'user_id' => $user_id,
                         'created_at' => now(),
@@ -117,13 +114,43 @@ class DatabaseSeeder extends Seeder
                 'thumbnail' => $this->faker->imageUrl,
                 'title' => $this->faker->sentence(12),
                 'description' => $this->faker->sentence(300),
-                'preview_video' => '3kVuXXAghyg',
+                'preview_video' => 'oFgg7K2tpfk',
                 'duration' => random_int(15, 25).' hours',
                 'price' => random_int(100, 500) * 1000,
                 'user_id' => $this->faker->randomElement($user_ids),
                 'is_verify' => true,
                 'rating' => (float) (random_int(3, 4).'.'.random_int(1, 9)),
                 'created_at' => $this->faker->dateTimeBetween('-2 years'),
+            ];
+        }
+        $name_and_thumbnails = [
+            'The Complete HTML & CSS Bootcamp 2023 Edition' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-27-590x430.webp',
+            'Grow Personal Financial Security Thinking & Principles' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-32-590x430.webp',
+            'The Complete Guide to Build RESTful API Application' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-38-590x430.webp',
+            'Competitive Strategy Law for Management Consultants' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-30-590x430.webp',
+            'Machine Learning A-Z: Hands-On Python and java' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-39-590x430.webp',
+            'Learning How To Write As A Professional Author' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-33-590x430.webp',
+            'Educating Through Christ to Learn And to Serve' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/01/course-02-2-590x430.webp',
+            'Web Development Masterclass & Certifications' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-37-590x430.webp',
+            'The Complete Python Bootcamp From Zero to Hero' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-26-590x430.webp',
+            'Advanced Java Programming with Eclipse' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-35-590x430.webp',
+            'Ultimate AWS Certified Cloud Practitioner – 2023' => 'https://eduvibe.devsvibe.com/main/wp-content/uploads/2023/03/course-34-590x430.webp',
+        ];
+        foreach ($name_and_thumbnails as $name => $thumbnail) {
+            $courses[] = [
+                'id' => Str::uuid(),
+                'name' => $name,
+                'slug' => Str::slug($name),
+                'thumbnail' => $thumbnail,
+                'title' => $this->faker->sentence(12),
+                'description' => $this->faker->sentence(300),
+                'preview_video' => 'oFgg7K2tpfk',
+                'duration' => random_int(15, 25).' hours',
+                'price' => random_int(100, 500) * 1000,
+                'user_id' => $this->faker->randomElement($user_ids),
+                'is_verify' => true,
+                'rating' => (float) (random_int(3, 4).'.'.random_int(1, 9)),
+                'created_at' => now()->subMinutes(random_int(1, 10)),
             ];
         }
         Course::query()->insert($courses);
@@ -143,7 +170,7 @@ class DatabaseSeeder extends Seeder
                     'name' => $name,
                     'slug' => Str::slug($name),
                     'document' => $this->faker->randomHtml(6),
-                    'video' => 'ji8cjaFUIU0',
+                    'video' => 'wVboOz_O8rE',
                     'order' => $i,
                     'study_minutes' => random_int(20, 90),
                     'course_id' => $course_id,
