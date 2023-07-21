@@ -38,6 +38,11 @@ Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
         Route::post('/ask', [LectureController::class, 'ask'])->name('ask');
     });
 });
+Route::group(['prefix' => 'lecture', 'as' => 'lecture.'], function () {
+    Route::get('/create', [LectureController::class, 'create'])->name('create');
+    Route::get('/create/transform-video', [LectureController::class, 'transformVideo'])->name('transform_video');
+    Route::get('/create/preview-transform-video', [LectureController::class, 'previewTransformVideo'])->name('preview_transform_video');
+});
 Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function () {
     Route::post('/{course}', [CheckoutController::class, 'checkout'])->name('process');
     Route::get('/success', [CheckoutController::class, 'validatePayment'])->name('success');

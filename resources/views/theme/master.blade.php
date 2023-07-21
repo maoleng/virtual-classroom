@@ -17,6 +17,7 @@
 ============================================ -->
 <!-- Modernizer JS -->
 @include('theme.script')
+@yield('script')
 </body>
 
 </html>

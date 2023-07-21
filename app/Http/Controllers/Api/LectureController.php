@@ -28,6 +28,29 @@ class LectureController extends ApiController
         return c(UpdateRequest::class);
     }
 
+    public function create()
+    {
+        $course = Course::query()->orderByDesc('created_at')->first();
+
+        return view('lecture.create', [
+            'course' => $course,
+        ]);
+    }
+
+    public function transformVideo()
+    {
+        return view('lecture.transform_video');
+    }
+
+    public function previewTransformVideo()
+    {
+        $course = Course::query()->orderByDesc('created_at')->first();
+
+        return view('lecture.preview_transform_video', [
+            'course' => $course,
+        ]);
+    }
+
     public function ask(AskRequest $request): array
     {
         $data = $request->validated();
