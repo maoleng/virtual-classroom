@@ -82,8 +82,7 @@
                                             </div>
                                             <div class="content">
                                                 <h4 class="title">Fast Performance</h4>
-                                                <p>Optimized for a smaller build size, faster dev compilation and dozens of
-                                                    other improvements.</p>
+                                                <p>Accelerate Your Learning Journey with Our Lightning-Fast Platform!.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -95,8 +94,7 @@
                                             </div>
                                             <div class="content">
                                                 <h4 class="title">Perfect Responsive</h4>
-                                                <p>Our template is full perfect for all device. You can visit our template all
-                                                    device easily.</p>
+                                                <p>Seamless Learning Anywhere: Experience Our Perfectly Responsive Platform!</p>
                                             </div>
                                         </div>
                                     </div>
@@ -108,8 +106,7 @@
                                             </div>
                                             <div class="content">
                                                 <h4 class="title">Fast &amp; Friendly Support</h4>
-                                                <p>We are provide 24 hours support for all clients.You can purchase without
-                                                    hesitation.</p>
+                                                <p>Swift and Welcoming: Experience Our Fast & Friendly Support!</p>
                                             </div>
                                         </div>
                                     </div>
@@ -121,8 +118,7 @@
                                             </div>
                                             <div class="content">
                                                 <h4 class="title">Easy to Use</h4>
-                                                <p>Create your own custom template or section by copying, pasting, and assembling.
-                                                </p>
+                                                <p>Effortless Learning: Discover Our Easy-to-Use Platform!</p>
                                             </div>
                                         </div>
                                     </div>
@@ -149,98 +145,55 @@
     <!-- End Slider Area  -->
 
     <!-- Start Coding Quality Area  -->
-    <div class="rbt-splash-coding-quality-area bg-color-white rbt-section-gapBottom">
-        <div class="wrapper">
-            <div class="container">
-                <div class="row mb--60">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center">
-                            <span class="subtitle bg-secondary-opacity">All in One Template</span>
-                            <h2 class="title">Why Choose V-Classroom.</h2>
-                        </div>
+    <div class="rbt-video-area bg-color-white rbt-section-gapTop pb--200" id="about">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="video-popup-wrapper">
+                        <img class="w-100 rbt-radius" src="assets/images/others/video.png" alt="Video Images">
+                        <a class="rbt-btn rounded-player popup-video position-to-top rbtplayer" href="https://www.youtube.com/watch?v=nA1Aqp0sPQo">
+                            <span><i class="feather-play"></i></span>
+                        </a>
+
                     </div>
                 </div>
-                <div class="row g-5">
-                    <!-- Start Top Feature  -->
-                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-15">
-                            <div class="inner">
-                                <div class="content">
-                                    <h4 class="title">Self-learning more easily.</h4>
-                                </div>
-                                <div class="thumbnail">
-                                    <img src="assets/images/splash/topfeature/01.png" alt="Image">
-                                </div>
-                                <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Individual instructor</span>
-                                    <span class="rbt-badge">Multiple Instructors</span>
-                                    <span class="rbt-badge">Marketplace</span>
-                                    <span class="rbt-badge">Single Course</span>
-                                    <span class="rbt-badge">Like Udemy</span>
-                                    <span class="rbt-badge">& More...</span>
-                                </div>
-                            </div>
-                            <div class="shape-image">
-                                <img src="assets/images/splash/icons/sun-shadow-right.png" alt="Shape Images">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Top Feature  -->
-
-                    <!-- Start Top Feature  -->
-                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-16">
-                            <div class="inner">
-                                <div class="content">
-                                    <h4 class="title">Interact Directly To The Teacher.</h4>
+                <div class="col-lg-6">
+                    <div class="inner pl--50 pl_lg--0 pl_md--0 pl_sm--0">
+                        <div class="section-title text-start">
+                            <h4 class="title">Inspirational story.</h4>
+                            <p class="description mt--30">
+                                While studying courses on online platforms. We feels that the courses have good knowledge content, but there is a lack of interaction between learners and teachers. Learners feel bored because they can't answer questions right in the learning process and this causes a loss of motivation to study.
+                            </p>
+                            <div class="rbt-feature-wrapper mt--40">
+                                <div class="rbt-feature feature-style-1 align-items-center">
+                                    <div class="icon bg-pink-opacity">
+                                        <i class="feather-heart"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h6 class="feature-title">Flexible Classes</h6>
+                                    </div>
                                 </div>
 
-                                <div class="thumbnail">
-                                    <img src="assets/images/splash/topfeature/02.png" alt="Image">
+                                <div class="rbt-feature feature-style-1 align-items-center">
+                                    <div class="icon bg-primary-opacity">
+                                        <i class="feather-book"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h6 class="feature-title">Learn From Anywhere</h6>
+                                    </div>
                                 </div>
-                                <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Higher education</span>
-                                    <span class="rbt-badge">Universitys</span>
-                                    <span class="rbt-badge">Kindergarden</span>
-                                    <span class="rbt-badge">Pre School</span>
-                                    <span class="rbt-badge">High School</span>
-                                    <span class="rbt-badge">& More...</span>
+
+                                <div class="rbt-feature feature-style-1 align-items-center">
+                                    <div class="icon bg-coral-opacity">
+                                        <i class="feather-monitor"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h6 class="feature-title">Interact with lecture easily.</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="shape-image">
-                                <img src="assets/images/splash/icons/sun-shadow-right-2.png" alt="Shape Images">
                             </div>
                         </div>
                     </div>
-                    <!-- End Top Feature  -->
-
-                    <!-- Start Top Feature  -->
-                    <div class="col-lg-4 col-md-6 col-12" data-sal-delay="250" data-sal="slide-up" data-sal-duration="800">
-                        <div class="top-features-box h-100 text-center bg-gradient-17">
-                            <div class="inner">
-                                <div class="content">
-                                    <h4 class="title">Good Price.</h4>
-                                </div>
-
-                                <div class="thumbnail">
-                                    <img src="assets/images/splash/topfeature/03.png" alt="Image">
-                                </div>
-
-                                <div class="rbt-badge-group">
-                                    <span class="rbt-badge">Language Academy</span>
-                                    <span class="rbt-badge">Gym Coaching</span>
-                                    <span class="rbt-badge">Career Trenning </span>
-                                    <span class="rbt-badge">Life Coaching</span>
-                                    <span class="rbt-badge">& More...</span>
-                                </div>
-
-                            </div>
-                            <div class="shape-image">
-                                <img src="assets/images/splash/icons/sun-shadow-right-3.png" alt="Shape Images">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Top Feature  -->
                 </div>
             </div>
         </div>
@@ -316,25 +269,25 @@
                                     <div class="tab-content">
                                         <div class="tab-pane fade advance-tab-content-1 active show" id="layouttab1" role="tabpanel" aria-labelledby="layouttab1-tab">
                                             <div class="thumbnail">
-                                                <img src="assets/images/splash/courses-layout.png" alt="advance-tab-image">
+                                                <img src="assets/images/splash/online-course.jpg" alt="advance-tab-image">
                                             </div>
 
                                         </div>
                                         <div class="tab-pane fade advance-tab-content-1" id="layouttab2" role="tabpanel" aria-labelledby="layouttab2-tab">
                                             <div class="thumbnail">
-                                                <img src="assets/images/splash/header-layout.png" alt="advance-tab-image">
+                                                <img src="assets/images/splash/header.jpg" alt="advance-tab-image">
                                             </div>
                                         </div>
 
                                         <div class="tab-pane fade advance-tab-content-1" id="layouttab3" role="tabpanel" aria-labelledby="layouttab3-tab">
                                             <div class="thumbnail">
-                                                <img src="assets/images/splash/elements.png" alt="advance-tab-image">
+                                                <img src="assets/images/splash/curve.jpg" alt="advance-tab-image">
                                             </div>
                                         </div>
 
                                         <div class="tab-pane fade advance-tab-content-1" id="layouttab4" role="tabpanel" aria-labelledby="layouttab4-tab">
                                             <div class="thumbnail">
-                                                <img src="assets/images/splash/code.png" alt="advance-tab-image">
+                                                <img src="assets/images/splash/interact.png" alt="advance-tab-image">
                                             </div>
                                         </div>
 
@@ -349,214 +302,6 @@
         </div>
     </div>
     <!-- End Advance Tab  -->
-
-    <div class="rbt-pluginpresentation-area bg-color-white rbt-section-gapTop">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <span class="subtitle bg-primary-opacity">CORE FEATURES</span>
-                        <h2 class="title">V-Classroom Exclusive Features</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt--60 g-5">
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/bootstrap.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Bootstrap5</h5>
-                                <span class="rbt-badge">CSS Framework</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/font.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Google Font</h5>
-                                <span class="rbt-badge">Exclusive Fonts</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/instagram.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Instagram</h5>
-                                <span class="rbt-badge">Photo and Video</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/mainchimp.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Mainchimp</h5>
-                                <span class="rbt-badge">Email Platform</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/validation.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">W3C Validation</h5>
-                                <span class="rbt-badge">Markup Validity</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/isotop.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Isotop</h5>
-                                <span class="rbt-badge">ImagesLoaded</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/slider.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Swiper Sldier</h5>
-                                <span class="rbt-badge">Slider Plugin</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/contact.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Contact Form</h5>
-                                <span class="rbt-badge">Dynamic Form</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/popup.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Magnify Popup</h5>
-                                <span class="rbt-badge">Lightbox & Dialog</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/seo.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">SEO Friendly</h5>
-                                <span class="rbt-badge">Search Engine</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/support.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Pro Support</h5>
-                                <span class="rbt-badge">Pro Support</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-                <!-- Start Single Plugin  -->
-                <div class="col-lg-3 col-xl-2 col-md-4 col-sm-6 col-6 rbt-feature-column" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="rbt-feature-plugin">
-                        <div class="inner">
-                            <div class="thumbnail">
-                                <img src="assets/images/splash/plugin/animation.png" alt="Plugin Images">
-                            </div>
-                            <div class="content">
-                                <h5 class="title">Animation</h5>
-                                <span class="rbt-badge">Traditional Animation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Plugin  -->
-
-            </div>
-        </div>
-    </div>
-    <!-- End Plugin Presentation Area  -->
 
     <!-- Start Course Presentation Area  -->
     <div class="rbt-inner-page-layout-area bg-color-white rbt-section-gap rbt-shape-bg-area top-circle-shape-top">
@@ -673,67 +418,6 @@
                                     </div>
                                     <!-- End Single Slider  -->
 
-                                    <!-- Start Single Slider  -->
-                                    <div class="swiper-slide">
-                                        <div class="single-slide">
-                                            <div class="rbt-splash-inner-layout-inner">
-                                                <div class="thumbnail image-left-content">
-                                                    <img src="assets/images/splash/innerlayout/course-layout-08.png" alt="split Images">
-                                                </div>
-                                                <div class="content text-center">
-                                                    <h4 class="title">Course Layout Eight</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Slider  -->
-
-                                    <!-- Start Single Slider  -->
-                                    <div class="swiper-slide">
-                                        <div class="single-slide">
-                                            <div class="rbt-splash-inner-layout-inner">
-                                                <div class="thumbnail image-left-content">
-                                                    <img src="assets/images/splash/innerlayout/course-layout-09.png" alt="split Images">
-                                                </div>
-                                                <div class="content text-center">
-                                                    <h4 class="title">Course Layout Nine</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Slider  -->
-
-                                    <!-- Start Single Slider  -->
-                                    <div class="swiper-slide">
-                                        <div class="single-slide">
-                                            <div class="rbt-splash-inner-layout-inner">
-                                                <div class="thumbnail image-left-content">
-                                                    <img src="assets/images/splash/innerlayout/course-layout-10.png" alt="split Images">
-                                                </div>
-                                                <div class="content text-center">
-                                                    <h4 class="title">Course Layout Ten</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Slider  -->
-
-                                    <!-- Start Single Slider  -->
-                                    <div class="swiper-slide">
-                                        <div class="single-slide">
-                                            <div class="rbt-splash-inner-layout-inner">
-                                                <div class="thumbnail image-left-content">
-                                                    <img src="assets/images/splash/innerlayout/course-layout-11.png" alt="split Images">
-                                                </div>
-                                                <div class="content text-center">
-                                                    <h4 class="title">Course Layout Eleven</h4>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Slider  -->
-
-
                                 </div>
                                 <div class="rbt-swiper-pagination"></div>
                                 <div class="rbt-swiper-arrow rbt-arrow-left">
@@ -791,6 +475,286 @@
         </div>
     </div>
     <!-- End Course Presentation Area  -->
+
+    <div class="rbt-team-area bg-color-white rbt-section-gapBottom">
+        <div class="container">
+            <div class="row mb--60">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h5 class="title">About Us</h5>
+                        <p class="description mt--10">5 students from Ton Duc Thang University with the ambition to use technology to recover the positive impacts for the development of education.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+
+                <div class="col-lg-7">
+                    <!-- Start Tab Content  -->
+                    <div class="rbt-team-tab-content tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show" id="team-tab1" role="tabpanel" aria-labelledby="team-tab1-tab">
+                            <div class="inner">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-01.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                                <div class="rbt-team-details">
+                                    <div class="author-info">
+                                        <h4 class="title">Nguyễn Thị Kim Tiến</h4>
+                                        <span class="designation theme-gradient">Chief Executive Officer</span>
+                                        <span class="team-form">
+                                <i class="feather-map-pin"></i>
+                                <span class="location">Information Technology</span>
+                                        </span>
+                                    </div>
+                                    <p>Histudy The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <ul class="social-icon social-default mt--20 justify-content-start">
+                                        <li><a href="https://www.facebook.com/">
+                                                <i class="feather-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.twitter.com">
+                                                <i class="feather-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.instagram.com/">
+                                                <i class="feather-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="rbt-information-list mt--25">
+                                        <li>
+                                            <a href="mailto:hello@example.com"><i class="feather-mail"></i>icon.acaclub@it.tdt.edu.vn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="team-tab2" role="tabpanel" aria-labelledby="team-tab2-tab">
+                            <div class="inner">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-02.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                                <div class="rbt-team-details">
+                                    <div class="author-info">
+                                        <h4 class="title">Nguyễn Hữu Kha</h4>
+                                        <span class="designation theme-gradient">Chief Commercial Officer</span>
+                                        <span class="team-form">
+                                <i class="feather-map-pin"></i>
+                                <span class="location">Business administration</span>
+                                        </span>
+                                    </div>
+                                    <p>Education The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <ul class="social-icon social-default mt--20 justify-content-start">
+                                        <li><a href="https://www.facebook.com/">
+                                                <i class="feather-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.twitter.com">
+                                                <i class="feather-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.instagram.com/">
+                                                <i class="feather-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="rbt-information-list mt--25">
+                                        <li>
+                                            <a href="mailto:hello@example.com"><i class="feather-mail"></i>icon.acaclub@it.tdt.edu.vn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="team-tab3" role="tabpanel" aria-labelledby="team-tab3-tab">
+                            <div class="inner">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-03.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                                <div class="rbt-team-details">
+                                    <div class="author-info">
+                                        <h4 class="title">Nguyễn Hữu An</h4>
+                                        <span class="designation theme-gradient">Chief Product Officer</span>
+                                        <span class="team-form">
+                                <i class="feather-map-pin"></i>
+                                <span class="location">Information Technology</span>
+                                        </span>
+                                    </div>
+                                    <p>React The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <ul class="social-icon social-default mt--20 justify-content-start">
+                                        <li><a href="https://www.facebook.com/">
+                                                <i class="feather-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.twitter.com">
+                                                <i class="feather-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.instagram.com/">
+                                                <i class="feather-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="rbt-information-list mt--25">
+                                        <li>
+                                            <a href="mailto:hello@example.com"><i class="feather-mail"></i>icon.acaclub@it.tdt.edu.vn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="team-tab4" role="tabpanel" aria-labelledby="team-tab4-tab">
+                            <div class="inner">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-04.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                                <div class="rbt-team-details">
+                                    <div class="author-info">
+                                        <h4 class="title">Võ Cường Thịnh</h4>
+                                        <span class="designation theme-gradient"> Chief Strategy Officer</span>
+                                        <span class="team-form">
+                                <i class="feather-map-pin"></i>
+                                <span class="location">Information Technology</span>
+                                        </span>
+                                    </div>
+                                    <p>Histudy The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <ul class="social-icon social-default mt--20 justify-content-start">
+                                        <li><a href="https://www.facebook.com/">
+                                                <i class="feather-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.twitter.com">
+                                                <i class="feather-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.instagram.com/">
+                                                <i class="feather-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="rbt-information-list mt--25">
+                                        <li>
+                                            <a href="mailto:hello@example.com"><i class="feather-mail"></i>icon.acaclub@it.tdt.edu.vn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="team-tab5" role="tabpanel" aria-labelledby="team-tab5-tab">
+                            <div class="inner">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-05.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                                <div class="rbt-team-details">
+                                    <div class="author-info">
+                                        <h4 class="title">Bùi Hữu Lộc</h4>
+                                        <span class="designation theme-gradient">Chief Technology Officer</span>
+                                        <span class="team-form">
+                                <i class="feather-map-pin"></i>
+                                <span class="location">Information Technology</span>
+                                        </span>
+                                    </div>
+                                    <p>Histudy The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <ul class="social-icon social-default mt--20 justify-content-start">
+                                        <li><a href="https://www.facebook.com/">
+                                                <i class="feather-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.twitter.com">
+                                                <i class="feather-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li><a href="https://www.instagram.com/">
+                                                <i class="feather-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="rbt-information-list mt--25">
+                                        <li>
+                                            <a href="mailto:hello@example.com"><i class="feather-mail"></i>icon.acaclub@it.tdt.edu.vn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="top-circle-shape"></div>
+                    </div>
+                    <!-- End Tab Content  -->
+                </div>
+
+                <div class="col-lg-5">
+                    <!-- Start Tab Nav  -->
+                    <ul class="rbt-team-tab-thumb nav nav-tabs" id="myTab" role="tablist">
+                        <li>
+                            <a class="active" id="team-tab1-tab" data-bs-toggle="tab" data-bs-target="#team-tab1" role="tab" aria-controls="team-tab1" aria-selected="true">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-01.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a id="team-tab2-tab" data-bs-toggle="tab" data-bs-target="#team-tab2" role="tab" aria-controls="team-tab2" aria-selected="false">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-02.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a id="team-tab3-tab" data-bs-toggle="tab" data-bs-target="#team-tab3" role="tab" aria-controls="team-tab3" aria-selected="false">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-03.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="team-tab4-tab" data-bs-toggle="tab" data-bs-target="#team-tab4" role="tab" aria-controls="team-tab4" aria-selected="false">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-04.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a id="team-tab5-tab" data-bs-toggle="tab" data-bs-target="#team-tab5" role="tab" aria-controls="team-tab5" aria-selected="false">
+                                <div class="rbt-team-thumbnail">
+                                    <div class="thumb">
+                                        <img src="assets/images/team/team-05.jpg" alt="Testimonial Images">
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Tab Content  -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Start Campain Area  -->
     <div class="rbt-buy-now-area bg-gradient-8 rbt-section-gap">
