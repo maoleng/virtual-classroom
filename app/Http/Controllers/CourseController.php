@@ -86,6 +86,26 @@ class CourseController extends Controller
         return view('lecture.quiz_result', $data);
     }
 
+    public function assignment($slug, $lecture_slug)
+    {
+        $data = $this->getLectureData($slug, $lecture_slug);
+        if (! is_array($data)) {
+            return $data;
+        }
+
+        return view('lecture.assignment', $data);
+    }
+
+    public function assignmentSubmit($slug, $lecture_slug)
+    {
+        $data = $this->getLectureData($slug, $lecture_slug);
+        if (! is_array($data)) {
+            return $data;
+        }
+
+        return view('lecture.assignment_submit', $data);
+    }
+
     private function getLectureData($slug, $lecture_slug): array|RedirectResponse
     {
         $course = services()->courseService()->where('slug', $slug)->with(['lectures', 'user', 'users'])->firstOrFail();

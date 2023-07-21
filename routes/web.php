@@ -32,6 +32,8 @@ Route::group(['prefix' => 'course', 'as' => 'course.'], function () {
         Route::get('/{slug}/{lecture_slug}/document', [CourseController::class, 'lectureDocument'])->name('lecture_document');
         Route::get('/{slug}/{lecture_slug}/quiz', [CourseController::class, 'quiz'])->name('quiz');
         Route::get('/{slug}/{lecture_slug}/quiz_result', [CourseController::class, 'quizResult'])->name('quiz_result');
+        Route::get('/{slug}/{lecture_slug}/assignment', [CourseController::class, 'assignment'])->name('assignment');
+        Route::get('/{slug}/{lecture_slug}/assignment_submit', [CourseController::class, 'assignmentSubmit'])->name('assignment_submit');
         Route::post('/ask', [LectureController::class, 'ask'])->name('ask');
     });
 });

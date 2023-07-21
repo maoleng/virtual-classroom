@@ -75,6 +75,42 @@
                             </div>
                         @endforeach
 
+                        <div class="accordion-item card">
+                            <h2 class="accordion-header card-header" id="headingTwo1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#collapseAssign" aria-controls="collapseTwo{{ $i }}">
+                                    Final Assignment
+                                </button>
+                            </h2>
+                            <div id="collapseAssign" class="accordion-collapse collapse show" aria-labelledby="headingTwo1">
+                                <div class="accordion-body card-body">
+                                    <ul class="rbt-course-main-content liststyle">
+
+                                        <li>
+                                            <a href="{{ route('course.assignment', ['slug' => $course->slug, 'lecture_slug' => Str::slug($lecture->name)]) }}">
+                                                <div class="course-content-left">
+                                                    <i class="feather-play-circle"></i> <span class="text">Assignment</span>
+                                                </div>
+                                                <div class="course-content-right">
+                                                    <span class="rbt-check unread"><i class="feather-circle"></i></span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="{{ route('course.assignment_submit', ['slug' => $course->slug, 'lecture_slug' => Str::slug($lecture->name)]) }}">
+                                                <div class="course-content-left">
+                                                    <i class="feather-file-text"></i> <span class="text">Submit Assignment</span>
+                                                </div>
+                                                <div class="course-content-right">
+                                                    <span class="rbt-check unread"><i class="feather-circle"></i></span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
