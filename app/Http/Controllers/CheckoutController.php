@@ -49,8 +49,9 @@ class CheckoutController extends Controller
             abort(403, 'Bad request');
         }
         $course = Course::query()->find($data['vnp_OrderInfo']);
+        $authed_id = is_string(authed()->id) ? authed()->id : authed()->id->toString();
         $course->users()->sync([
-            authed()->id->toString() => ['price' => $course->lastPrice],
+            $authed_id => ['price' => $course->lastPrice],
         ]);
 
         return view('course.checkout_success', [
