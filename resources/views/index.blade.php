@@ -207,7 +207,7 @@
                 <div class="row mb--60">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
-                            <span class="subtitle bg-secondary-opacity">You Can Customize Everything
+                            <span class="subtitle bg-secondary-opacity">You Can Learn Everything
                             </span>
                             <h2 class="title">Improve you to the <span class="theme-gradient"> Next Level!</span></h2>
                             <p class="description mt--20">An all-in-one service with powerful features.
