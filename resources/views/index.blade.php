@@ -501,7 +501,7 @@
                                 </div>
                                 <div class="rbt-team-details">
                                     <div class="author-info">
-                                        <h4 class="title">Nguyễn Thị Kim Tiến</h4>
+                                        <h4 class="title">Nguyen Thi Kim Tien</h4>
                                         <span class="designation theme-gradient">Chief Executive Officer</span>
                                         <span class="team-form">
                                 <i class="feather-map-pin"></i>
@@ -544,7 +544,7 @@
                                 </div>
                                 <div class="rbt-team-details">
                                     <div class="author-info">
-                                        <h4 class="title">Nguyễn Hữu Kha</h4>
+                                        <h4 class="title">Nguyen Huu Kha</h4>
                                         <span class="designation theme-gradient">Chief Commercial Officer</span>
                                         <span class="team-form">
                                 <i class="feather-map-pin"></i>
@@ -587,7 +587,7 @@
                                 </div>
                                 <div class="rbt-team-details">
                                     <div class="author-info">
-                                        <h4 class="title">Nguyễn Hữu An</h4>
+                                        <h4 class="title">Nguyen Huu An</h4>
                                         <span class="designation theme-gradient">Chief Product Officer</span>
                                         <span class="team-form">
                                 <i class="feather-map-pin"></i>
@@ -630,7 +630,7 @@
                                 </div>
                                 <div class="rbt-team-details">
                                     <div class="author-info">
-                                        <h4 class="title">Võ Cường Thịnh</h4>
+                                        <h4 class="title">Vo Cuong Thinh</h4>
                                         <span class="designation theme-gradient"> Chief Strategy Officer</span>
                                         <span class="team-form">
                                 <i class="feather-map-pin"></i>
@@ -673,7 +673,7 @@
                                 </div>
                                 <div class="rbt-team-details">
                                     <div class="author-info">
-                                        <h4 class="title">Bùi Hữu Lộc</h4>
+                                        <h4 class="title">Bui Huu Loc</h4>
                                         <span class="designation theme-gradient">Chief Technology Officer</span>
                                         <span class="team-form">
                                 <i class="feather-map-pin"></i>
