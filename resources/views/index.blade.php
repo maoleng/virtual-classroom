@@ -508,7 +508,10 @@
                                 <span class="location">Information Technology</span>
                                         </span>
                                     </div>
-                                    <p>Histudy The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <p>TECH STARTUP CHALLENGER 2023 is organized with the aim of creating conditions for students of the Faculty of Information Technology in particular and students of Ton Duc Thang University in general to have more knowledge and skills about entrepreneurship, thereby promoting the creative spirit, finding good startup ideas about technology.
+
+
+</p>
                                     <ul class="social-icon social-default mt--20 justify-content-start">
                                         <li><a href="https://www.facebook.com/">
                                                 <i class="feather-facebook"></i>
@@ -548,7 +551,10 @@
                                 <span class="location">Business administration</span>
                                         </span>
                                     </div>
-                                    <p>Education The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <p>TECH STARTUP CHALLENGER 2023 is organized with the aim of creating conditions for students of the Faculty of Information Technology in particular and students of Ton Duc Thang University in general to have more knowledge and skills about entrepreneurship, thereby promoting the creative spirit, finding good startup ideas about technology.
+
+
+</p>
                                     <ul class="social-icon social-default mt--20 justify-content-start">
                                         <li><a href="https://www.facebook.com/">
                                                 <i class="feather-facebook"></i>
@@ -588,7 +594,10 @@
                                 <span class="location">Information Technology</span>
                                         </span>
                                     </div>
-                                    <p>React The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <p>TECH STARTUP CHALLENGER 2023 is organized with the aim of creating conditions for students of the Faculty of Information Technology in particular and students of Ton Duc Thang University in general to have more knowledge and skills about entrepreneurship, thereby promoting the creative spirit, finding good startup ideas about technology.
+
+
+</p>
                                     <ul class="social-icon social-default mt--20 justify-content-start">
                                         <li><a href="https://www.facebook.com/">
                                                 <i class="feather-facebook"></i>
@@ -628,7 +637,10 @@
                                 <span class="location">Information Technology</span>
                                         </span>
                                     </div>
-                                    <p>Histudy The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <p>TECH STARTUP CHALLENGER 2023 is organized with the aim of creating conditions for students of the Faculty of Information Technology in particular and students of Ton Duc Thang University in general to have more knowledge and skills about entrepreneurship, thereby promoting the creative spirit, finding good startup ideas about technology.
+
+
+</p>
                                     <ul class="social-icon social-default mt--20 justify-content-start">
                                         <li><a href="https://www.facebook.com/">
                                                 <i class="feather-facebook"></i>
@@ -668,7 +680,10 @@
                                 <span class="location">Information Technology</span>
                                         </span>
                                     </div>
-                                    <p>Histudy The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
+                                    <p>TECH STARTUP CHALLENGER 2023 is organized with the aim of creating conditions for students of the Faculty of Information Technology in particular and students of Ton Duc Thang University in general to have more knowledge and skills about entrepreneurship, thereby promoting the creative spirit, finding good startup ideas about technology.
+
+
+</p>
                                     <ul class="social-icon social-default mt--20 justify-content-start">
                                         <li><a href="https://www.facebook.com/">
                                                 <i class="feather-facebook"></i>
