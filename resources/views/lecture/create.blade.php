@@ -53,18 +53,13 @@
                                         <div class="accordion-body card-body">
 
                                             <div class="rbt-create-course-thumbnail upload-area">
-                                                    <div class="upload-area">
-                                                        <div class="brows-file-wrapper" data-black-overlay="9">
-                                                            <!-- actual upload which is hidden -->
-                                                            <input name="createinputfile" id="createinputfile" type="file" class="inputfile" />
-                                                            <img id="createfileImage" src="{{ asset('assets/images/others/thumbnail-placeholder.svg') }}" alt="file image">
-                                                            <!-- our custom upload button -->
-                                                            <label class="d-flex" for="createinputfile" title="No File Choosen">
-                                                                <i class="feather-upload"></i>
-                                                                <span class="text-center">Choose a File</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
+                                                <form action="#">
+                                                    <label for="images" class="drop-container rbt-custom-file-upload mt--30">
+                                                        <span class="mb--0 h5">Drop files here</span>
+                                                        or
+                                                        <input type="file" id="images" accept="image/*" required>
+                                                    </label>
+                                                </form>
                                                 </div>
 
                                             <small><i class="feather-info"></i>
@@ -77,9 +72,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
                         </div>
 
