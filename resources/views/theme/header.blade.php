@@ -95,9 +95,9 @@
                                     </div>
                                     <ul class="user-list-wrapper">
                                         <li>
-                                            <a href="#">
+                                            <a href="{{ route('user.enrolled_course') }}">
                                                 <i class="feather-home"></i>
-                                                <span>Dashboard</span>
+                                                <span>Enrolled Course</span>
                                             </a>
                                         </li>
                                     </ul>

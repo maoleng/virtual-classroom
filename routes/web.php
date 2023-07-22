@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\App\TeacherRole;
 use App\Http\Middleware\App\IfAlreadyChooseRole;
 use App\Http\Middleware\App\IfAlreadyLogin;
@@ -46,5 +47,8 @@ Route::group(['prefix' => 'lecture', 'as' => 'lecture.'], function () {
 Route::group(['prefix' => 'checkout', 'as' => 'checkout.'], function () {
     Route::post('/{course}', [CheckoutController::class, 'checkout'])->name('process');
     Route::get('/success', [CheckoutController::class, 'validatePayment'])->name('success');
+});
+Route::group(['prefix' => 'user', 'as' => 'user.'], function () {
+    Route::get('/enrolled-course', [UserController::class, 'enrolledCourse'])->name('enrolled_course');
 });
 
